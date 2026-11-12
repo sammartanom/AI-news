@@ -1,0 +1,65 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "ai-news",
+  "main": "src/index.mjs",
+  "compatibility_date": "2026-10-24",
+
+  // Static site. The Worker runs first for the API, the sign-in path, the feed, robots.txt and
+  // sitemap.xml, and for the app's pages (/, /grid, /saved), whose head it writes for each URL
+  // (src/routes/pages.mjs). Every other path is served from ./public, with index.html as the
+  // fallback for client-side routes.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*", "/login", "/feed.xml", "/robots.txt", "/sitemap.xml", "/", "/grid", "/saved"]
+  },
+
+  // No Cloudflare request logs: nothing about visitors is kept, not even in the account's logs.
+  "observability": { "enabled": false, "logs": { "enabled": false, "invocation_logs": false } },
+
+  // Resource data. The database ID is an identifier, not a secret.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ai-news",
+      "database_id": "23ed53a8-9711-4938-a7fb-b4d78214425a",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // 768 dimensions, cosine. Embeddings come from @cf/baai/bge-base-en-v1.5 with mean pooling;
+  // see src/search/embedding.mjs.
+  "vectorize": [{ "binding": "VECTORIZE", "index_name": "ai-news-resources" }],
+  "ai": { "binding": "AI" },
+
+  // Ingestion, maintenance and AI briefs. Keep in sync with CRON_INGEST, CRON_DAILY and CRON_BRIEFS in src/jobs.mjs.
+  "triggers": { "crons": ["17 */2 * * *", "43 3 * * *", "47 1-23/2 * * *"] },
+
+  // namespace_id is an integer you choose, unique within the Cloudflare account.
+  "ratelimits": [
+    { "name": "AI_LIMITER", "namespace_id": "2107", "simple": { "limit": 10, "period": 60 } },
+    { "name": "SEARCH_LIMITER", "namespace_id": "2108", "simple": { "limit": 60, "period": 60 } }
+  ],
+
+  // Non-secret configuration. Secrets (ADMIN_TOKEN, BOOTSTRAP_EDITOR_EMAILS) are set with
+  // `wrangler secret put` and never stored here. See docs/CONFIGURATION.md.
+  "vars": {
+    "ENABLE_AI_ANSWERS": "false",
+    "CHAT_MODEL": "",
+    "ACCESS_TEAM_DOMAIN": "",
+    "ACCESS_AUD": "",
+    "SHARE_ALLOWED_DOMAINS": "",
+    "SEMANTIC_MIN_SCORE": "0.5",
+    "TRIAGE_MODEL": "",
+    // Workers AI models for search and the weekly digest. Empty turns a feature off; search then
+    // falls back to keyword + vector, and the digest to a plain roundup.
+    "SEARCH_MODEL": "@cf/meta/llama-3.1-8b-instruct-fast",
+    "RERANK_MODEL": "@cf/baai/bge-reranker-base",
+    "DIGEST_MODEL": "@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "BRIEF_MODEL": "@cf/meta/llama-3.1-8b-instruct-fast",
+    "TRIAGE_MIN_CONFIDENCE": "0.7",
+    "QUEUE_EXPIRE_DAYS": "30",
+    "BOT_CONTACT": ""
+  }
+}

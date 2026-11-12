@@ -1,0 +1,7 @@
+# Copy to .dev.vars for `wrangler dev`. Never commit .dev.vars.
+# Optional bearer token for automation (ingest, reindex). Generate a long random value.
+ADMIN_TOKEN=
+# Comma-separated emails that become editors on first sign-in.
+BOOTSTRAP_EDITOR_EMAILS=
+# Local only: act as this user without Cloudflare Access (honored only on localhost).
+DEV_USER_EMAIL=

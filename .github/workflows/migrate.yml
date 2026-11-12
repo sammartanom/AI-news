@@ -1,0 +1,50 @@
+name: Apply D1 migrations
+
+# Manual only. Migrations never run as part of a deploy. Review the pending list first,
+# then run this workflow with confirm = apply. CI has already rejected destructive SQL unless a
+# migration carries an explicit "-- allow-destructive: <reason>" comment.
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "list shows pending migrations; apply runs them on the production database"
+        type: choice
+        options: [list, apply]
+        default: list
+      confirm:
+        description: 'Type "apply" to confirm (needed for apply)'
+        type: string
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm test
+      - name: Pending migrations
+        if: inputs.action == 'list'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: d1 migrations list DB --remote
+      - name: Apply migrations
+        if: inputs.action == 'apply' && inputs.confirm == 'apply'
+        uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: d1 migrations apply DB --remote

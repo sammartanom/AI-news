@@ -1,0 +1,60 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Repository checks (syntax, secrets, copy rules, migration safety)
+        run: npm run check
+      - name: Unit and integration tests
+        run: npm test
+      - name: Bundle and validate Worker configuration
+        run: npm run build:dry
+      - name: Install browser for end-to-end tests
+        run: |
+          npm install --no-save playwright@1.63.0
+          npx playwright install --with-deps chromium
+      - name: End-to-end tests
+        run: npm run test:e2e
+
+  # Optional: deploy from GitHub Actions instead of Workers Builds. Use one or the other.
+  # Enable by setting the repository variable DEPLOY_WITH_GITHUB_ACTIONS to "true" and adding the
+  # secrets CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID. Runs only after every test above passes.
+  deploy:
+    needs: test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && vars.DEPLOY_WITH_GITHUB_ACTIONS == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - uses: cloudflare/wrangler-action@v4
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy

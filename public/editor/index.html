@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="robots" content="noindex">
+<title>Editor</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="stylesheet" href="/editor/editor.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 24 24%27 fill=%27none%27 stroke=%27%230c0e10%27 stroke-width=%272%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27%3E%3Cpolygon points=%2713 2 3 14 12 14 11 22 21 10 12 10 13 2%27/%3E%3C/svg%3E">
+<script src="/theme.js"></script>
+</head>
+<body class="editor">
+<a class="skip" href="#ed">Skip to content</a>
+<header class="ed-bar">
+  <a class="ed-brand" href="/" aria-label="View the site"><svg class="icon icon-zap" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg><span>Editor</span></a>
+  <nav class="ed-tabs" aria-label="Editor" hidden>
+    <button type="button" data-tab="review">Review <span class="ed-count num" data-count="review"></span></button>
+    <button type="button" data-tab="library">Library</button>
+    <button type="button" data-tab="feeds">Feeds</button>
+    <button type="button" data-tab="activity">Activity</button>
+  </nav>
+  <div class="ed-bar-end" hidden>
+    <button type="button" class="btn btn-primary ed-add-btn" id="add-open"><svg class="icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true" focusable="false"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg><span>Add</span></button>
+    <button type="button" class="ed-icon-btn" id="signout" hidden aria-label="Sign out" title="Sign out"><svg class="icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg></button>
+  </div>
+</header>
+<main id="ed" tabindex="-1"></main>
+<div id="live" class="sr" role="status" aria-live="polite"></div>
+<div class="ed-toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="/editor/editor.js"></script>
+</body>
+</html>

@@ -1,0 +1,2230 @@
+[
+  {
+    "id": "digital-promise",
+    "name": "Digital Promise",
+    "publisher": "Digital Promise",
+    "feed_url": "https://digitalpromise.org/feed/",
+    "site_url": "https://digitalpromise.org/",
+    "allowed_hosts": [
+      "digitalpromise.org"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Feed URL is advertised on the publisher's home page (link rel=alternate). Checked 2026-10-26: valid RSS 2.0, 1 item at the time. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "education-week",
+    "name": "Education Week",
+    "publisher": "Education Week",
+    "feed_url": "https://www.edweek.org/index.rss",
+    "site_url": "https://www.edweek.org/",
+    "allowed_hosts": [
+      "edweek.org"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Feed URL is advertised on the publisher's home page (link rel=alternate). Checked 2026-10-26: valid RSS, 11 items, 5 with dates. Many articles are behind a subscription; confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edsurge",
+    "name": "EdSurge",
+    "publisher": "EdSurge",
+    "feed_url": "https://www.edsurge.com/articles_rss",
+    "site_url": "https://www.edsurge.com/",
+    "allowed_hosts": [
+      "edsurge.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Checked 2026-10-26: valid RSS 2.0 from the publisher's domain, 50 items, all dated, about 22 mention AI. The home page did not advertise this URL in a link rel=alternate tag when checked, so confirm it on the publisher's site before marking it verified."
+  },
+  {
+    "id": "edweek-ai",
+    "name": "Education Week: Artificial Intelligence",
+    "publisher": "Education Week",
+    "feed_url": "https://www.edweek.org/technology/artificial-intelligence.rss",
+    "site_url": "https://www.edweek.org/technology/artificial-intelligence",
+    "allowed_hosts": [
+      "edweek.org"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "The national K-12 newspaper's dedicated AI section: policy, classroom practice and research coverage. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on edweek.org; 26 of 28 recent items are about AI. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edsurge-ai",
+    "name": "EdSurge: Artificial Intelligence",
+    "publisher": "EdSurge",
+    "feed_url": "https://www.edsurge.com/articles_rss?tag=artificial-intelligence",
+    "site_url": "https://www.edsurge.com/news/topics/artificial-intelligence",
+    "allowed_hosts": [
+      "edsurge.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "EdSurge's AI tag: teacher voices, product and research reporting, K-12 and higher education. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on edsurge.com; 21 of 50 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "the74-ai",
+    "name": "The 74: Artificial Intelligence",
+    "publisher": "The 74",
+    "feed_url": "https://www.the74million.org/tag/artificial-intelligence/feed/",
+    "site_url": "https://www.the74million.org/",
+    "allowed_hosts": [
+      "the74million.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Nonprofit K-12 newsroom; its AI tag covers state policy, district adoption and opinion from practitioners. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on the74million.org; 21 of 25 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "hechinger-ai",
+    "name": "The Hechinger Report: Artificial Intelligence",
+    "publisher": "The Hechinger Report",
+    "feed_url": "https://hechingerreport.org/tags/artificial-intelligence/feed/",
+    "site_url": "https://hechingerreport.org/",
+    "allowed_hosts": [
+      "hechingerreport.org"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Nonprofit education journalism with an emphasis on research; includes critical looks at AI evidence. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on hechingerreport.org; 5 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "chalkbeat",
+    "name": "Chalkbeat",
+    "publisher": "Chalkbeat",
+    "feed_url": "https://www.chalkbeat.org/arc/outboundfeeds/rss/?outputType=xml",
+    "site_url": "https://www.chalkbeat.org/",
+    "allowed_hosts": [
+      "chalkbeat.org"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Nonprofit local K-12 news across many US cities: how districts and teachers actually handle AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on chalkbeat.org; 5 of 100 recent items have AI in the title; the AI filter keeps only those. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "crpe",
+    "name": "Center on Reinventing Public Education",
+    "publisher": "CRPE",
+    "feed_url": "https://crpe.org/feed/",
+    "site_url": "https://crpe.org/",
+    "allowed_hosts": [
+      "crpe.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "collections": [
+        "policy-governance",
+        "school-district-leadership"
+      ]
+    },
+    "require_match": true,
+    "notes": "Arizona State University research center tracking state and district AI policy in K-12. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on crpe.org; 3 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "aiforeducation",
+    "name": "AI for Education",
+    "publisher": "AI for Education",
+    "feed_url": "https://www.aiforeducation.io/blog?format=rss",
+    "site_url": "https://www.aiforeducation.io/",
+    "allowed_hosts": [
+      "aiforeducation.io"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "ai-literacy",
+        "professional-learning"
+      ]
+    },
+    "require_match": true,
+    "notes": "Organisation focused on AI literacy and professional learning for K-12 educators. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on aiforeducation.io; 5 of 9 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "techlearning-ai",
+    "name": "Tech & Learning: AI",
+    "publisher": "Tech & Learning",
+    "feed_url": "https://www.techlearning.com/feeds/tag/ai",
+    "site_url": "https://www.techlearning.com/",
+    "allowed_hosts": [
+      "techlearning.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Long-running K-12 technology publication; practical classroom and leadership pieces on AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on techlearning.com; 24 of 34 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "oecd-edutoday",
+    "name": "OECD Education and Skills Today",
+    "publisher": "OECD",
+    "feed_url": "https://oecdedutoday.com/feed/",
+    "site_url": "https://oecdedutoday.com/",
+    "allowed_hosts": [
+      "oecdedutoday.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "collections": [
+        "research-evidence"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "The OECD education directorate's blog: international data, including PISA findings on generative AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on oecdedutoday.com; 1 of 8 recent items has AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "fpf-education",
+    "name": "Future of Privacy Forum: Education",
+    "publisher": "Future of Privacy Forum",
+    "feed_url": "https://fpf.org/issue/education/feed/",
+    "site_url": "https://fpf.org/",
+    "allowed_hosts": [
+      "fpf.org"
+    ],
+    "default_metadata": {
+      "format": "Guidance",
+      "evidence_type": "guidance",
+      "collections": [
+        "privacy-security"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Student-privacy policy and guidance, increasingly about AI tools and chatbots in schools. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on fpf.org; 2 of 6 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "educationnext",
+    "name": "Education Next",
+    "publisher": "Education Next",
+    "feed_url": "https://www.educationnext.org/feed/",
+    "site_url": "https://www.educationnext.org/",
+    "allowed_hosts": [
+      "educationnext.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Harvard-affiliated journal of opinion and research; adds policy debate on AI and schooling. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on educationnext.org; 1 of 10 recent items has AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "conversation-education",
+    "name": "The Conversation: Education",
+    "publisher": "The Conversation",
+    "feed_url": "https://theconversation.com/us/education/articles.atom",
+    "site_url": "https://theconversation.com/us/education",
+    "allowed_hosts": [
+      "theconversation.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Articles written by academic researchers; plain-language summaries of AI and learning research. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, every item link on theconversation.com; 2 of 25 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ditchthattextbook",
+    "name": "Ditch That Textbook",
+    "publisher": "Ditch That Textbook",
+    "feed_url": "https://ditchthattextbook.com/feed/",
+    "site_url": "https://ditchthattextbook.com/",
+    "allowed_hosts": [
+      "ditchthattextbook.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "inside-classroom"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Classroom-practice blog by teacher Matt Miller; concrete examples of AI use with students. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on ditchthattextbook.com; 3 of 8 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "oneusefulthing",
+    "name": "One Useful Thing (Ethan Mollick)",
+    "publisher": "One Useful Thing",
+    "feed_url": "https://www.oneusefulthing.org/feed",
+    "site_url": "https://www.oneusefulthing.org/",
+    "allowed_hosts": [
+      "oneusefulthing.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Wharton professor Ethan Mollick on using AI for teaching, learning and work; widely cited by educators. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on oneusefulthing.org; 1 of 5 recent items has AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "k12dive-technology",
+    "name": "K-12 Dive: Technology",
+    "publisher": "K-12 Dive",
+    "feed_url": "https://www.k12dive.com/feeds/topic/technology/",
+    "site_url": "https://www.k12dive.com/topic/technology/",
+    "allowed_hosts": [
+      "k12dive.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Trade news for district leaders; the technology topic covers AI policy, procurement and practice. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on k12dive.com; 4 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edtechmag-k12",
+    "name": "EdTech Magazine: K-12",
+    "publisher": "EdTech Magazine",
+    "feed_url": "https://edtechmagazine.com/k12/rss.xml",
+    "site_url": "https://edtechmagazine.com/k12/",
+    "allowed_hosts": [
+      "edtechmagazine.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "K-12 IT and leadership coverage: infrastructure, security and AI deployment. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on edtechmagazine.com; 2 of 10 recent items mention AI. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edtechmag-higher",
+    "name": "EdTech Magazine: Higher Education",
+    "publisher": "EdTech Magazine",
+    "feed_url": "https://edtechmagazine.com/higher/rss.xml",
+    "site_url": "https://edtechmagazine.com/higher/",
+    "allowed_hosts": [
+      "edtechmagazine.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Higher-education IT coverage of AI in student support, teaching and campus operations. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on edtechmagazine.com; 2 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "leonfurze",
+    "name": "Leon Furze",
+    "publisher": "Leon Furze",
+    "feed_url": "https://leonfurze.com/feed/",
+    "site_url": "https://leonfurze.com/",
+    "allowed_hosts": [
+      "leonfurze.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Educator and researcher (AI Assessment Scale co-author) writing on AI policy, assessment and critical AI literacy. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on leonfurze.com; 8 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "educatingai",
+    "name": "Educating AI (Nick Potkalitsky)",
+    "publisher": "Educating AI",
+    "feed_url": "https://nickpotkalitsky.substack.com/feed",
+    "site_url": "https://nickpotkalitsky.substack.com/",
+    "allowed_hosts": [
+      "nickpotkalitsky.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Teacher-researcher writing on AI, writing instruction and student thinking. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on nickpotkalitsky.substack.com; 13 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "rhetorica",
+    "name": "Rhetorica (Marc Watkins)",
+    "publisher": "Rhetorica",
+    "feed_url": "https://marcwatkins.substack.com/feed",
+    "site_url": "https://marcwatkins.substack.com/",
+    "allowed_hosts": [
+      "marcwatkins.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "University of Mississippi writing faculty on generative AI, writing and academic integrity. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on marcwatkins.substack.com; 4 of 8 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "absentmindedprofessor",
+    "name": "The Absent-Minded Professor (Josh Brake)",
+    "publisher": "The Absent-Minded Professor",
+    "feed_url": "https://joshbrake.substack.com/feed",
+    "site_url": "https://joshbrake.substack.com/",
+    "allowed_hosts": [
+      "joshbrake.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "collections": [
+        "questions-concerns"
+      ],
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Harvey Mudd engineering professor on technology, AI and learning; a thoughtful sceptical voice. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on joshbrake.substack.com; 3 of 5 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "aiedusimplified",
+    "name": "AI + Education = Simplified (Lance Eaton)",
+    "publisher": "AI + Education = Simplified",
+    "feed_url": "https://aiedusimplified.substack.com/feed",
+    "site_url": "https://aiedusimplified.substack.com/",
+    "allowed_hosts": [
+      "aiedusimplified.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Higher-education instructional designer on AI policy, open education and faculty development. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on aiedusimplified.substack.com; 6 of 18 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "wonkhe",
+    "name": "Wonkhe",
+    "publisher": "Wonkhe",
+    "feed_url": "https://wonkhe.com/feed",
+    "site_url": "https://wonkhe.com/",
+    "allowed_hosts": [
+      "wonkhe.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "UK higher-education policy site; adds an international view on AI and assessment. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on wonkhe.com; 2 of 25 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "gettingsmart",
+    "name": "Getting Smart",
+    "publisher": "Getting Smart",
+    "feed_url": "https://www.gettingsmart.com/feed/",
+    "site_url": "https://www.gettingsmart.com/",
+    "allowed_hosts": [
+      "gettingsmart.com"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Innovation-focused K-12 commentary, frequently on AI and future-ready learning. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on gettingsmart.com; 1 of 10 recent items mentions AI. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "larrycuban",
+    "name": "Larry Cuban on School Reform and Classroom Practice",
+    "publisher": "Larry Cuban",
+    "feed_url": "https://larrycuban.wordpress.com/feed/",
+    "site_url": "https://larrycuban.wordpress.com/",
+    "allowed_hosts": [
+      "larrycuban.wordpress.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "collections": [
+        "questions-concerns"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Stanford historian of school technology; a long-view, critical perspective on edtech promises. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, every item link on larrycuban.wordpress.com; 1 of 10 recent items mentions AI. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "facultyfocus",
+    "name": "Faculty Focus",
+    "publisher": "Faculty Focus",
+    "feed_url": "https://www.facultyfocus.com/feed/",
+    "site_url": "https://www.facultyfocus.com/",
+    "allowed_hosts": [
+      "facultyfocus.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "inside-classroom"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Practical articles on college teaching written by faculty, including frequent pieces on AI in courses. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on facultyfocus.com (image links on a CDN are skipped); 3 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "tihe",
+    "name": "Teaching in Higher Ed",
+    "publisher": "Teaching in Higher Ed",
+    "feed_url": "https://teachinginhighered.com/feed/",
+    "site_url": "https://teachinginhighered.com/",
+    "allowed_hosts": [
+      "teachinginhighered.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "collections": [
+        "professional-learning"
+      ]
+    },
+    "require_match": true,
+    "notes": "Bonni Stachowiak's weekly podcast on college teaching; regular AI episodes with researchers and faculty. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on teachinginhighered.com; 2 of 10 recent episodes have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "controlaltachieve",
+    "name": "Control Alt Achieve (Eric Curts)",
+    "publisher": "Control Alt Achieve",
+    "feed_url": "https://www.controlaltachieve.com/feeds/posts/default",
+    "site_url": "https://www.controlaltachieve.com/",
+    "allowed_hosts": [
+      "controlaltachieve.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "inside-classroom"
+      ],
+      "archive": "blogger"
+    },
+    "require_match": true,
+    "notes": "K-12 technology integration blog by Eric Curts with classroom AI prompts, guides and webinars. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on controlaltachieve.com; 11 of 25 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "shakeup",
+    "name": "Shake Up Learning (Kasey Bell)",
+    "publisher": "Shake Up Learning",
+    "feed_url": "https://shakeuplearning.com/feed/",
+    "site_url": "https://shakeuplearning.com/",
+    "allowed_hosts": [
+      "shakeuplearning.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "inside-classroom",
+        "professional-learning"
+      ]
+    },
+    "require_match": true,
+    "notes": "Teacher-facing guides on classroom technology, with a large share on AI tools and vocabulary for teachers. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on shakeuplearning.com; 5 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "mikekentz",
+    "name": "AI EduPathways (Mike Kentz)",
+    "publisher": "Mike Kentz",
+    "feed_url": "https://mikekentz.substack.com/feed",
+    "site_url": "https://mikekentz.substack.com/",
+    "allowed_hosts": [
+      "mikekentz.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Former teacher writing on AI literacy, assessment and how schools organise AI work. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on mikekentz.substack.com; 17 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "bauschard",
+    "name": "Education Disrupted (Stefan Bauschard)",
+    "publisher": "Stefan Bauschard",
+    "feed_url": "https://stefanbauschard.substack.com/feed",
+    "site_url": "https://stefanbauschard.substack.com/",
+    "allowed_hosts": [
+      "stefanbauschard.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 4
+    },
+    "require_match": true,
+    "notes": "Analysis of AI's effects on schools, debate and student skills, with podcast interviews. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on stefanbauschard.substack.com; 14 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "nomoremarking",
+    "name": "No More Marking (Daisy Christodoulou)",
+    "publisher": "No More Marking",
+    "feed_url": "https://substack.nomoremarking.com/feed",
+    "site_url": "https://substack.nomoremarking.com/",
+    "allowed_hosts": [
+      "substack.nomoremarking.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "collections": [
+        "assessment-integrity"
+      ],
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Assessment researchers reporting trials of AI marking and feedback on student writing. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on substack.nomoremarking.com; 4 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "hendrick",
+    "name": "Carl Hendrick",
+    "publisher": "Carl Hendrick",
+    "feed_url": "https://carlhendrick.substack.com/feed",
+    "site_url": "https://carlhendrick.substack.com/",
+    "allowed_hosts": [
+      "carlhendrick.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "collections": [
+        "learning-thinking"
+      ],
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Learning-science writer examining what cognitive research says about AI and learning. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on carlhendrick.substack.com; 3 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "danmeyer",
+    "name": "Mathworlds (Dan Meyer)",
+    "publisher": "Dan Meyer",
+    "feed_url": "https://danmeyer.substack.com/feed",
+    "site_url": "https://danmeyer.substack.com/",
+    "allowed_hosts": [
+      "danmeyer.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "collections": [
+        "questions-concerns"
+      ],
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Math educator with a sceptical, evidence-minded view of AI tutors and chatbots in classrooms. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on danmeyer.substack.com; 5 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "cogres",
+    "name": "Cognitive Resonance (Benjamin Riley)",
+    "publisher": "Cognitive Resonance",
+    "feed_url": "https://buildcognitiveresonance.substack.com/feed",
+    "site_url": "https://buildcognitiveresonance.substack.com/",
+    "allowed_hosts": [
+      "buildcognitiveresonance.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "collections": [
+        "questions-concerns"
+      ],
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Cognitive-science critique of how generative AI is used in education. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on buildcognitiveresonance.substack.com; 1 of 20 recent titles names AI, but AI is the newsletter's main subject; only AI titles are queued. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "hardman",
+    "name": "Dr Phil's Newsletter (Philippa Hardman)",
+    "publisher": "Philippa Hardman",
+    "feed_url": "https://drphilippahardman.substack.com/feed",
+    "site_url": "https://drphilippahardman.substack.com/",
+    "allowed_hosts": [
+      "drphilippahardman.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Learning designer testing AI for instructional design, with evidence from studies. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on drphilippahardman.substack.com; 12 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "eliterate",
+    "name": "e-Literate",
+    "publisher": "e-Literate",
+    "feed_url": "https://eliterate.us/feed/",
+    "site_url": "https://eliterate.us/",
+    "allowed_hosts": [
+      "eliterate.us"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary"
+    },
+    "require_match": true,
+    "notes": "Michael Feldstein's analysis of higher-education technology, including the economics of AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on eliterate.us; 8 of 15 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "coolcat",
+    "name": "Cool Cat Teacher (Vicki Davis)",
+    "publisher": "Cool Cat Teacher",
+    "feed_url": "https://www.coolcatteacher.com/feed/",
+    "site_url": "https://www.coolcatteacher.com/",
+    "allowed_hosts": [
+      "coolcatteacher.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "inside-classroom"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Classroom teacher's blog and podcast with practical AI conversations for K-12 teachers. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on coolcatteacher.com; 5 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "thejournal",
+    "name": "THE Journal",
+    "publisher": "THE Journal",
+    "feed_url": "https://thejournal.com/rss-feeds/news.aspx",
+    "site_url": "https://thejournal.com/",
+    "allowed_hosts": [
+      "thejournal.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news"
+    },
+    "require_match": true,
+    "notes": "K-12 education technology news; much of it now covers AI products, policy and security. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on thejournal.com; 22 of 31 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "campustech",
+    "name": "Campus Technology",
+    "publisher": "Campus Technology",
+    "feed_url": "https://campustechnology.com/rss-feeds/news.aspx",
+    "site_url": "https://campustechnology.com/",
+    "allowed_hosts": [
+      "campustechnology.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news"
+    },
+    "require_match": true,
+    "notes": "Higher-education technology news, heavily focused on AI adoption, surveys and security. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on campustechnology.com; 40 of 50 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edscoop",
+    "name": "EdScoop",
+    "publisher": "EdScoop",
+    "feed_url": "https://edscoop.com/feed/",
+    "site_url": "https://edscoop.com/",
+    "allowed_hosts": [
+      "edscoop.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "News on technology policy in schools and universities, including district AI rules. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on edscoop.com (links to its sister site statescoop.com are skipped); 4 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edtechinsiders",
+    "name": "Edtech Insiders",
+    "publisher": "Edtech Insiders",
+    "feed_url": "https://edtechinsiders.substack.com/feed",
+    "site_url": "https://edtechinsiders.substack.com/",
+    "allowed_hosts": [
+      "edtechinsiders.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Newsletter and podcast on the education technology market and AI's place in it. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on edtechinsiders.substack.com; 12 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "learningscientists",
+    "name": "The Learning Scientists",
+    "publisher": "The Learning Scientists",
+    "feed_url": "https://www.learningscientists.org/blog?format=rss",
+    "site_url": "https://www.learningscientists.org/",
+    "allowed_hosts": [
+      "learningscientists.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "learning-thinking"
+      ]
+    },
+    "require_match": true,
+    "notes": "Cognitive psychologists translating learning research for teachers, including on AI and assessment. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on learningscientists.org; 1 of 20 recent items has AI in the title; only those are queued. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "npr-ed",
+    "name": "NPR Education",
+    "publisher": "NPR",
+    "feed_url": "https://feeds.npr.org/1013/rss.xml",
+    "site_url": "https://www.npr.org/sections/education/",
+    "allowed_hosts": [
+      "npr.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news"
+    },
+    "require_match": true,
+    "notes": "National public radio's education desk; occasional, well-reported AI stories. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on npr.org; 1 of 10 recent items has AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "hepi",
+    "name": "HEPI",
+    "publisher": "Higher Education Policy Institute",
+    "feed_url": "https://www.hepi.ac.uk/feed/",
+    "site_url": "https://www.hepi.ac.uk/",
+    "allowed_hosts": [
+      "hepi.ac.uk"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "policy-governance"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "UK higher-education policy think tank; publishes the annual student generative AI survey and AI commentary. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on hepi.ac.uk; 3 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "wcet",
+    "name": "WCET Frontiers",
+    "publisher": "WCET",
+    "feed_url": "https://wcet.wiche.edu/feed/",
+    "site_url": "https://wcet.wiche.edu/",
+    "allowed_hosts": [
+      "wcet.wiche.edu"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "policy-governance"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "WICHE Cooperative for Educational Technologies blog on digital learning policy and AI in higher education. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on wcet.wiche.edu; 2 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ithaka",
+    "name": "Ithaka S+R",
+    "publisher": "Ithaka S+R",
+    "feed_url": "https://sr.ithaka.org/feed/",
+    "site_url": "https://sr.ithaka.org/",
+    "allowed_hosts": [
+      "sr.ithaka.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "collections": [
+        "research-evidence"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "Nonprofit research on higher education and libraries, including studies of faculty and student AI use. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on sr.ithaka.org; 7 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "everylearner",
+    "name": "Every Learner Everywhere",
+    "publisher": "Every Learner Everywhere",
+    "feed_url": "https://www.everylearnereverywhere.org/feed/",
+    "site_url": "https://www.everylearnereverywhere.org/",
+    "allowed_hosts": [
+      "everylearnereverywhere.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "equity-access"
+      ]
+    },
+    "require_match": true,
+    "notes": "Network focused on equitable digital learning in college, with guides and research on AI for student success. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on everylearnereverywhere.org; 28 of 100 items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "compedu",
+    "name": "Computers & Education",
+    "publisher": "Elsevier",
+    "feed_url": "https://rss.sciencedirect.com/publication/science/03601315",
+    "site_url": "https://www.sciencedirect.com/journal/computers-and-education",
+    "allowed_hosts": [
+      "sciencedirect.com"
+    ],
+    "default_metadata": {
+      "format": "Research paper",
+      "evidence_type": "research",
+      "collections": [
+        "research-evidence"
+      ]
+    },
+    "require_match": true,
+    "notes": "Peer-reviewed journal on educational technology; many new articles study AI in learning. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on sciencedirect.com; 16 of 38 latest articles have AI in the title; the feed gives no dates, so dates stay unknown. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "caeai",
+    "name": "Computers and Education: Artificial Intelligence",
+    "publisher": "Elsevier",
+    "feed_url": "https://rss.sciencedirect.com/publication/science/2666920X",
+    "site_url": "https://www.sciencedirect.com/journal/computers-and-education-artificial-intelligence",
+    "allowed_hosts": [
+      "sciencedirect.com"
+    ],
+    "default_metadata": {
+      "format": "Research paper",
+      "evidence_type": "research",
+      "collections": [
+        "research-evidence"
+      ]
+    },
+    "require_match": true,
+    "notes": "Open-access, peer-reviewed journal dedicated to AI in education. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on sciencedirect.com; 82 of 100 latest articles have AI in the title; the feed gives no dates, so dates stay unknown. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "bjet",
+    "name": "British Journal of Educational Technology",
+    "publisher": "Wiley",
+    "feed_url": "https://bera-journals.onlinelibrary.wiley.com/feed/14678535/most-recent",
+    "site_url": "https://bera-journals.onlinelibrary.wiley.com/journal/14678535",
+    "allowed_hosts": [
+      "bera-journals.onlinelibrary.wiley.com"
+    ],
+    "default_metadata": {
+      "format": "Research paper",
+      "evidence_type": "research",
+      "collections": [
+        "research-evidence"
+      ]
+    },
+    "require_match": true,
+    "notes": "Peer-reviewed journal of the British Educational Research Association; frequent AI studies. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on bera-journals.onlinelibrary.wiley.com; 18 of 34 latest articles have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "annamills",
+    "name": "Anna Mills",
+    "publisher": "Anna Mills",
+    "feed_url": "https://annamills.substack.com/feed",
+    "site_url": "https://annamills.substack.com/",
+    "allowed_hosts": [
+      "annamills.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "collections": [
+        "assessment-integrity"
+      ],
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "Writing instructor and open-textbook author on AI in the writing classroom and AI feedback. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on annamills.substack.com (cross-posts on other Substacks are skipped); 13 of 17 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "gulya",
+    "name": "The AI Edge (Jason Gulya)",
+    "publisher": "Jason Gulya",
+    "feed_url": "https://higherai.substack.com/feed",
+    "site_url": "https://higherai.substack.com/",
+    "allowed_hosts": [
+      "higherai.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 10
+    },
+    "require_match": true,
+    "notes": "College professor on AI, assessment and course design in higher education. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on higherai.substack.com; 11 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "tyton",
+    "name": "Tyton Partners",
+    "publisher": "Tyton Partners",
+    "feed_url": "https://tytonpartners.com/feed/",
+    "site_url": "https://tytonpartners.com/",
+    "allowed_hosts": [
+      "tytonpartners.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "survey_data",
+      "collections": [
+        "research-evidence"
+      ]
+    },
+    "require_match": true,
+    "notes": "Education consultancy behind the Time for Class and Listening to Learners surveys on AI use by faculty and students. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on tytonpartners.com; 4 of 12 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ai-for-education-youtube",
+    "name": "AI for Education",
+    "publisher": "AI for Education",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCv4SFRm1qLNdnggkD0QTdFg",
+    "site_url": "https://www.aiforeducation.io/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Webinars and talks from AI for Education, an organization that trains K-12 schools and districts on generative AI use. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 15 of 15 items have AI in the title; newest 2026-10-22. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "aiedu-studios-youtube",
+    "name": "aiEDU Studios",
+    "publisher": "aiEDU (The AI Education Project)",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCaNRy1fsJ1RF86xaPvUTlxQ",
+    "site_url": "https://www.aiedu.org/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Video interviews from the nonprofit aiEDU on AI readiness, AI literacy, education policy and the future of work. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 7 of 15 items have AI in the title; newest 2026-10-26. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "mit-raise-youtube",
+    "name": "MIT RAISE",
+    "publisher": "MIT RAISE",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCwUwpH-kS_lPJmP9Y1U75Ig",
+    "site_url": "https://raise.mit.edu/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "MIT RAISE videos on responsible AI education for K-12 students, including Day of AI events and research talks. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 6 of 15 items have AI in the title; newest 2026-09-03. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "codeai-youtube",
+    "name": "CodeAI (Code.org)",
+    "publisher": "CodeAI (formerly Code.org)",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCJyEBMU1xVP2be1-AoGS1BA",
+    "site_url": "https://code.org/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Videos from the K-12 computer science nonprofit Code.org, now named CodeAI, on teaching AI literacy and computer science. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 10 of 15 items have AI in the title; newest 2026-10-27. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "eric-curts-youtube",
+    "name": "Eric Curts (Control Alt Achieve)",
+    "publisher": "Eric Curts",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCMv_WF1x-BUzvZkIUc05LaQ",
+    "site_url": "https://www.controlaltachieve.com/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Ohio edtech trainer Eric Curts posts sessions on classroom AI use, AI cheating, NotebookLM and Google tools for schools. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 7 of 15 items have AI in the title; newest 2026-10-08. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "leon-furze-youtube",
+    "name": "Leon Furze",
+    "publisher": "Leon Furze",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCSHuROLcL2PHInz0HgEFXeQ",
+    "site_url": "https://leonfurze.com/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Australian educator and researcher Leon Furze on generative AI in teaching, assessment and writing. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 8 of 9 items have AI in the title; newest 2025-12-04. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "raspberry-pi-computing-ed-research",
+    "name": "Raspberry Pi Foundation: Computing education research",
+    "publisher": "Raspberry Pi Foundation",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PLxyaWvsfmq497kQR_KGF1UoijvZHDBZfh",
+    "site_url": "https://www.raspberrypi.org/research-impact/research",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Research seminar recordings from the Raspberry Pi Foundation on computing education, many on teaching AI in schools. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 6 of 13 items have AI in the title; newest 2026-10-27. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "educause-ai-higher-ed",
+    "name": "EDUCAUSE: AI in Higher Education",
+    "publisher": "EDUCAUSE",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PLckgEVSUS9SwnaFefvHUjLR4NY0kTOf53",
+    "site_url": "https://www.educause.edu/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "EDUCAUSE playlist of talks and conversations on AI use, policy and strategy in colleges and universities. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 12 of 12 items have AI in the title; newest 2026-08-20. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "jisc-ai-in-fe",
+    "name": "Jisc: AI in FE Community Sessions",
+    "publisher": "Jisc",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PLbKeiLya4JyAnHkZYbshM6vRY6Q7k19cN",
+    "site_url": "https://www.jisc.ac.uk/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Jisc community session recordings on AI in UK further education colleges, covering practice, tools and policy. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 15 of 15 items have AI in the title; newest 2026-10-28. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "stanford-ai-education-summit-2026",
+    "name": "Stanford AI+Education Summit 2026",
+    "publisher": "Stanford Accelerator for Learning",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PLmMpmkt8QQeFfzeWAaQzRzPuaX8cmNL5b",
+    "site_url": "https://acceleratelearning.stanford.edu/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Session recordings from the 2026 AI+Education Summit held by the Stanford Accelerator for Learning and Stanford HAI. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 11 of 11 items have AI in the title; newest 2026-02-19. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "digital-promise-ai-in-education",
+    "name": "Digital Promise: AI in Education",
+    "publisher": "Digital Promise",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?playlist_id=PL_0qMZxvbX5pPgXGhgZZFKuhmaNAGSeKF",
+    "site_url": "https://digitalpromise.org/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Digital Promise playlist of webinars and explainers on AI in K-12 education, AI literacy and responsible use. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 15 of 15 items have AI in the title; newest 2025-10-29. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "online-learning-consortium-youtube",
+    "name": "Online Learning Consortium",
+    "publisher": "Online Learning Consortium",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCQyyV_0x3hTX4_MYb9xYN5A",
+    "site_url": "https://onlinelearningconsortium.org/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Conference and webinar sessions from the Online Learning Consortium on online and hybrid teaching, often on AI pedagogy. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 5 of 15 items have AI in the title; newest 2026-08-05. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "chatedu-youtube",
+    "name": "ChatEDU: AI in Education",
+    "publisher": "EdAdvance",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCx7mvQguzz34ljqecZ-WVkg",
+    "site_url": "https://www.youtube.com/@ChatEDUEdAdvance",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Video podcast by Matt Mervis and Elizabeth Radday of EdAdvance on AI in K-12 schools, with news check-ins and interviews. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 9 of 15 items have AI in the title; newest 2026-10-28. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "holly-clark-youtube",
+    "name": "Holly Clark",
+    "publisher": "Holly Clark",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC1bfk44X6_NMfA8jjUW_dnA",
+    "site_url": "https://www.youtube.com/@HollyClarkEdu",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Educator and author Holly Clark posts a student AI literacy series and short reviews of classroom AI tools. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 9 of 15 items have AI in the title; newest 2026-05-13. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "my-edtech-life-youtube",
+    "name": "My EdTech Life",
+    "publisher": "Fonz Mendoza",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCa7ITct7TmiKXgVNu42bQqw",
+    "site_url": "https://www.youtube.com/@MyEdTechLife",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Video episodes of Fonz Mendoza's interview podcast with educators, much of it on AI in schools and AI literacy. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 7 of 15 items have AI in the title; newest 2026-10-28. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "the-edtech-podcast-youtube",
+    "name": "The Edtech Podcast",
+    "publisher": "The Edtech Podcast",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC7zgVJaumN3STe8psUWO-0w",
+    "site_url": "https://theedtechpodcast.com/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Video episodes of the UK-based Edtech Podcast, with frequent discussions of AI in schools and universities. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 9 of 15 items have AI in the title; newest 2026-06-26. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "class-tech-tips-youtube",
+    "name": "Class Tech Tips (Easy EdTech Podcast)",
+    "publisher": "Monica Burns",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UCxTDLakGermTPnd0F1b0zTw",
+    "site_url": "https://classtechtips.com/",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Former teacher Monica Burns posts Easy EdTech Podcast episodes with classroom strategies, including regular AI how-tos. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 6 of 15 items have AI in the title; newest 2026-10-27. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "drgeekay-youtube",
+    "name": "DrGeeKay: Educator Tech",
+    "publisher": "Gerhard Kristandl",
+    "feed_url": "https://www.youtube.com/feeds/videos.xml?channel_id=UC1Tc-LxPdy2q0U1Tg8wAVbQ",
+    "site_url": "https://www.youtube.com/@drgeekay",
+    "allowed_hosts": [
+      "youtube.com"
+    ],
+    "default_metadata": {
+      "format": "Video",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "University lecturer Gerhard Kristandl makes tech tutorials for higher-education teachers, mostly on generative AI. Checked 2026-10-28: valid Atom over HTTPS, under 2 MB, no DTD, item links on www.youtube.com; 13 of 15 items have AI in the title; newest 2026-07-07. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ai-in-education-podcast",
+    "name": "AI in Education Podcast",
+    "publisher": "Dan Bowen and Ray Fleming",
+    "feed_url": "https://rss.libsyn.com/shows/216230/destinations/1569005.xml",
+    "site_url": "https://aipodcast.education/",
+    "allowed_hosts": [
+      "aipodcast.education",
+      "rss.libsyn.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Dan Bowen and Ray Fleming discuss AI in schools and universities, with research reviews, news and guest interviews. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on aipodcast.education; 93 of 100 items have AI in the title; newest 2026-10-25. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "generative-age-podcast",
+    "name": "The Generative Age: AI in Education",
+    "publisher": "Alana Winnick (NYSCATE)",
+    "feed_url": "https://anchor.fm/s/dfdbc768/podcast/rss",
+    "site_url": "https://www.generativeage.com/",
+    "allowed_hosts": [
+      "anchor.fm",
+      "podcasters.spotify.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Alana Winnick hosts this NYSCATE-backed show with educators on generative AI in K-12 classrooms and schools. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on podcasters.spotify.com; 19 of 23 items have AI in the title; newest 2026-01-04. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edsurge-podcast",
+    "name": "This Week with EdSurge",
+    "publisher": "EdSurge",
+    "feed_url": "https://feeds.captivate.fm/this-week-in-edsurge/",
+    "site_url": "https://www.edsurge.com/podcasts",
+    "allowed_hosts": [
+      "feeds.captivate.fm",
+      "www.edsurge.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "The EdSurge podcast on K-12 and higher education news and research, with frequent episodes on AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on www.edsurge.com; 27 of 100 items have AI in the title; newest 2026-10-28. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "harvard-edcast",
+    "name": "The Harvard EdCast",
+    "publisher": "Harvard Graduate School of Education",
+    "feed_url": "https://feeds.simplecast.com/lky6oRKE",
+    "site_url": "https://www.gse.harvard.edu/edcast",
+    "allowed_hosts": [
+      "feeds.simplecast.com",
+      "www.gse.harvard.edu"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Harvard Graduate School of Education interviews with researchers and practitioners, including a share of episodes on AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on www.gse.harvard.edu; 4 of 100 items have AI in the title; newest 2026-04-08. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ai-for-educators-podcast",
+    "name": "AI for Educators",
+    "publisher": "Dan Fitzpatrick (The AI Educator)",
+    "feed_url": "https://anchor.fm/s/117237edc/podcast/rss",
+    "site_url": "https://theaieducator.io/",
+    "allowed_hosts": [
+      "anchor.fm",
+      "podcasters.spotify.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Dan Fitzpatrick, known as The AI Educator, covers AI news, policy and practice for teachers and school leaders. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on podcasters.spotify.com; 78 of 100 items have AI in the title; newest 2026-10-07. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "edtechteacher-podcast",
+    "name": "The EdTechTeacher Podcast",
+    "publisher": "EdTechTeacher",
+    "feed_url": "https://api.riverside.com/hosting/JunGrFEH.rss",
+    "site_url": "https://edtechteacher.org/",
+    "allowed_hosts": [
+      "api.riverside.com",
+      "podcasters.spotify.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "The professional development group EdTechTeacher discusses classroom technology, often Google AI tools and teacher-built AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on podcasters.spotify.com; 9 of 16 items have AI in the title; newest 2026-06-30. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "jisc-beyond-the-technology",
+    "name": "Beyond the Technology",
+    "publisher": "Jisc",
+    "feed_url": "https://rss.libsyn.com/shows/59633/destinations/228670.xml",
+    "site_url": "https://www.jisc.ac.uk/",
+    "allowed_hosts": [
+      "jiscpodcast.libsyn.com",
+      "rss.libsyn.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Jisc, the UK digital agency for tertiary education, discusses digital change in colleges and universities, including AI. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on jiscpodcast.libsyn.com; 9 of 100 items have AI in the title; newest 2026-09-16. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "tea-for-teaching",
+    "name": "Tea for Teaching",
+    "publisher": "John Kane and Rebecca Mushtare (SUNY Oswego)",
+    "feed_url": "https://feed.podbean.com/teaforteaching/feed.xml",
+    "site_url": "https://teaforteaching.com/",
+    "allowed_hosts": [
+      "feed.podbean.com",
+      "teaforteaching.podbean.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "John Kane and Rebecca Mushtare of SUNY Oswego talk with faculty about college teaching, including many AI episodes. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on teaforteaching.podbean.com; 22 of 100 items have AI in the title; newest 2026-10-28. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "class-disrupted",
+    "name": "Class Disrupted",
+    "publisher": "Diane Tavenner and Michael Horn",
+    "feed_url": "https://anchor.fm/s/118f7754c/podcast/rss",
+    "site_url": "https://classdisrupted.wordpress.com/",
+    "allowed_hosts": [
+      "anchor.fm",
+      "podcasters.spotify.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Diane Tavenner and Michael Horn discuss school redesign, with a recent season focused on AI in K-12 education. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on podcasters.spotify.com; 29 of 100 items have AI in the title; newest 2026-10-22. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "digital-learning-podcast",
+    "name": "The Digital Learning Podcast",
+    "publisher": "Holly Clark",
+    "feed_url": "https://rss.libsyn.com/shows/440508/destinations/3682608.xml",
+    "site_url": "https://sites.libsyn.com/440508",
+    "allowed_hosts": [
+      "f87e76f7-c23e-4106-bb91-b53aa307fca4.libsyn.com",
+      "rss.libsyn.com"
+    ],
+    "default_metadata": {
+      "format": "Podcast",
+      "title_only": true
+    },
+    "require_match": true,
+    "notes": "Educator Holly Clark and guests discuss blended learning and classroom AI literacy for K-12 teachers. Checked 2026-10-28: valid RSS over HTTPS, under 2 MB, no DTD, item links on f87e76f7-c23e-4106-bb91-b53aa307fca4.libsyn.com; 32 of 62 items have AI in the title; newest 2026-03-10. Only items with AI in the title are taken. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "mittr-ai",
+    "name": "MIT Technology Review: AI",
+    "publisher": "MIT Technology Review",
+    "feed_url": "https://www.technologyreview.com/topic/artificial-intelligence/feed",
+    "site_url": "https://www.technologyreview.com/",
+    "allowed_hosts": [
+      "technologyreview.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "archive": "wordpress",
+      "archive_pages": 3,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Reporting and analysis on AI research, industry and its effects on society. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 8 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ieee-ai",
+    "name": "IEEE Spectrum: AI",
+    "publisher": "IEEE Spectrum",
+    "feed_url": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
+    "site_url": "https://spectrum.ieee.org/",
+    "allowed_hosts": [
+      "spectrum.ieee.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Engineering-minded AI coverage from the IEEE. The feed also carries sponsored webinar links on other hosts; only spectrum.ieee.org links are allowed. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 19 of 30 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ars-ai",
+    "name": "Ars Technica: AI",
+    "publisher": "Ars Technica",
+    "feed_url": "https://arstechnica.com/ai/feed/",
+    "site_url": "https://arstechnica.com/ai/",
+    "allowed_hosts": [
+      "arstechnica.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Technology news desk covering AI models, companies and policy. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 9 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "verge-ai",
+    "name": "The Verge: AI",
+    "publisher": "The Verge",
+    "feed_url": "https://www.theverge.com/rss/ai-artificial-intelligence/index.xml",
+    "site_url": "https://www.theverge.com/ai-artificial-intelligence",
+    "allowed_hosts": [
+      "theverge.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Consumer-facing coverage of AI products and companies. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 4 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "wired-ai",
+    "name": "WIRED: AI",
+    "publisher": "WIRED",
+    "feed_url": "https://www.wired.com/feed/tag/ai/latest/rss",
+    "site_url": "https://www.wired.com/tag/artificial-intelligence/",
+    "allowed_hosts": [
+      "wired.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Features and news on AI and culture, work and politics. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 6 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "guardian-ai",
+    "name": "The Guardian: Artificial intelligence",
+    "publisher": "The Guardian",
+    "feed_url": "https://www.theguardian.com/technology/artificialintelligenceai/rss",
+    "site_url": "https://www.theguardian.com/technology/artificialintelligenceai",
+    "allowed_hosts": [
+      "theguardian.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "International news, reviews and opinion on AI. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 15 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "conversation-ai",
+    "name": "The Conversation: Artificial intelligence",
+    "publisher": "The Conversation",
+    "feed_url": "https://theconversation.com/topics/artificial-intelligence-ai-90/articles.atom",
+    "site_url": "https://theconversation.com/us/topics/artificial-intelligence-ai-90",
+    "allowed_hosts": [
+      "theconversation.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Academics explaining AI research and its consequences for a general audience. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 15 of 25 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "techcrunch-ai",
+    "name": "TechCrunch: AI",
+    "publisher": "TechCrunch",
+    "feed_url": "https://techcrunch.com/category/artificial-intelligence/feed/",
+    "site_url": "https://techcrunch.com/category/artificial-intelligence/",
+    "allowed_hosts": [
+      "techcrunch.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Industry news on AI companies, products and funding. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 10 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "nature-ml",
+    "name": "Nature: Machine learning",
+    "publisher": "Nature",
+    "feed_url": "https://www.nature.com/subjects/machine-learning.rss",
+    "site_url": "https://www.nature.com/subjects/machine-learning",
+    "allowed_hosts": [
+      "nature.com"
+    ],
+    "default_metadata": {
+      "format": "Research paper",
+      "evidence_type": "research",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Peer-reviewed papers and news from Nature journals tagged machine learning. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 14 of 30 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "mit-news-ai",
+    "name": "MIT News: Artificial intelligence",
+    "publisher": "MIT News",
+    "feed_url": "https://news.mit.edu/topic/mitartificial-intelligence2-rss.xml",
+    "site_url": "https://news.mit.edu/topic/artificial-intelligence2",
+    "allowed_hosts": [
+      "news.mit.edu"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Plain-language summaries of AI research at MIT. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 20 of 50 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "restofworld-ai",
+    "name": "Rest of World",
+    "publisher": "Rest of World",
+    "feed_url": "https://restofworld.org/feed/latest/",
+    "site_url": "https://restofworld.org/",
+    "allowed_hosts": [
+      "restofworld.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Reporting on technology and AI outside the US and Western Europe. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 7 of 12 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "404media-ai",
+    "name": "404 Media",
+    "publisher": "404 Media",
+    "feed_url": "https://www.404media.co/rss/",
+    "site_url": "https://www.404media.co/",
+    "allowed_hosts": [
+      "404media.co"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Independent investigative technology journalism. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 6 of 15 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "platformer-ai",
+    "name": "Platformer",
+    "publisher": "Platformer",
+    "feed_url": "https://www.platformer.news/rss/",
+    "site_url": "https://www.platformer.news/",
+    "allowed_hosts": [
+      "platformer.news"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Newsletter on platforms, AI companies and policy. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 5 of 15 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "aisnakeoil",
+    "name": "AI as Normal Technology",
+    "publisher": "Arvind Narayanan and Sayash Kapoor",
+    "feed_url": "https://www.normaltech.ai/feed",
+    "site_url": "https://www.normaltech.ai/",
+    "allowed_hosts": [
+      "normaltech.ai"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 3,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Princeton researchers (formerly AI Snake Oil) separating real AI capability from hype. Feed is large (about 1.5 MB). General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 17 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "importai",
+    "name": "Import AI",
+    "publisher": "Jack Clark",
+    "feed_url": "https://importai.substack.com/feed",
+    "site_url": "https://importai.substack.com/",
+    "allowed_hosts": [
+      "importai.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "archive": "substack",
+      "archive_pages": 3,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Weekly newsletter summarizing notable AI research papers. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 20 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "garymarcus",
+    "name": "Marcus on AI",
+    "publisher": "Gary Marcus",
+    "feed_url": "https://garymarcus.substack.com/feed",
+    "site_url": "https://garymarcus.substack.com/",
+    "allowed_hosts": [
+      "garymarcus.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 3,
+      "collections": [
+        "ai-beyond-education",
+        "questions-concerns"
+      ]
+    },
+    "require_match": true,
+    "notes": "Critical commentary on large language models and AI claims. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 9 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "interconnects",
+    "name": "Interconnects",
+    "publisher": "Nathan Lambert",
+    "feed_url": "https://www.interconnects.ai/feed",
+    "site_url": "https://www.interconnects.ai/",
+    "allowed_hosts": [
+      "interconnects.ai"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "A researcher on open models, training and the AI industry. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 5 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "algorithmicbridge",
+    "name": "The Algorithmic Bridge",
+    "publisher": "Alberto Romero",
+    "feed_url": "https://www.thealgorithmicbridge.com/feed",
+    "site_url": "https://www.thealgorithmicbridge.com/",
+    "allowed_hosts": [
+      "thealgorithmicbridge.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Essays on AI and how it is changing culture and work. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 11 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "understandingai",
+    "name": "Understanding AI",
+    "publisher": "Timothy B. Lee",
+    "feed_url": "https://www.understandingai.org/feed",
+    "site_url": "https://www.understandingai.org/",
+    "allowed_hosts": [
+      "understandingai.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Explainers on how AI works and what it means for the economy. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 5 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "aiguide",
+    "name": "AI: A Guide for Thinking Humans",
+    "publisher": "Melanie Mitchell",
+    "feed_url": "https://aiguide.substack.com/feed",
+    "site_url": "https://aiguide.substack.com/",
+    "allowed_hosts": [
+      "aiguide.substack.com"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "substack",
+      "archive_pages": 2,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "A complexity scientist on what AI systems can and cannot do. Posts are infrequent (newest in September). General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 13 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "lastweekinai",
+    "name": "Last Week in AI",
+    "publisher": "Last Week in AI",
+    "feed_url": "https://lastweekin.ai/feed",
+    "site_url": "https://lastweekin.ai/",
+    "allowed_hosts": [
+      "lastweekin.ai"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Weekly digest of AI news and research. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 16 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "latentspace",
+    "name": "Latent Space",
+    "publisher": "Latent Space",
+    "feed_url": "https://latent.space/feed",
+    "site_url": "https://www.latent.space/",
+    "allowed_hosts": [
+      "latent.space"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Newsletter and podcast notes for people building with AI. Feed is large (about 1.4 MB). General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 10 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "simonw",
+    "name": "Simon Willison",
+    "publisher": "Simon Willison",
+    "feed_url": "https://simonwillison.net/atom/everything/",
+    "site_url": "https://simonwillison.net/",
+    "allowed_hosts": [
+      "simonwillison.net"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Hands-on notes on using and testing large language models. Most posts are short links; only titles that mention AI are taken. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 5 of 30 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "aisafety-newsletter",
+    "name": "AI Safety Newsletter",
+    "publisher": "Center for AI Safety",
+    "feed_url": "https://newsletter.safe.ai/feed",
+    "site_url": "https://newsletter.safe.ai/",
+    "allowed_hosts": [
+      "newsletter.safe.ai"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "news",
+      "collections": [
+        "ai-beyond-education",
+        "policy-governance"
+      ]
+    },
+    "require_match": true,
+    "notes": "Regular roundup of AI safety research and policy news. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 15 of 20 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ainow",
+    "name": "AI Now Institute",
+    "publisher": "AI Now Institute",
+    "feed_url": "https://ainowinstitute.org/feed",
+    "site_url": "https://ainowinstitute.org/",
+    "allowed_hosts": [
+      "ainowinstitute.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "archive": "wordpress",
+      "archive_pages": 3,
+      "collections": [
+        "ai-beyond-education",
+        "policy-governance",
+        "questions-concerns"
+      ]
+    },
+    "require_match": true,
+    "notes": "Policy research on the social consequences of AI and concentrated power in the industry. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 6 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "pai",
+    "name": "Partnership on AI",
+    "publisher": "Partnership on AI",
+    "feed_url": "https://partnershiponai.org/feed/",
+    "site_url": "https://partnershiponai.org/",
+    "allowed_hosts": [
+      "partnershiponai.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "guidance",
+      "archive": "wordpress",
+      "archive_pages": 3,
+      "collections": [
+        "ai-beyond-education",
+        "policy-governance"
+      ]
+    },
+    "require_match": true,
+    "notes": "Multi-stakeholder nonprofit publishing guidance on responsible AI practice. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 8 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "oii",
+    "name": "Oxford Internet Institute",
+    "publisher": "Oxford Internet Institute",
+    "feed_url": "https://www.oii.ox.ac.uk/feed/",
+    "site_url": "https://www.oii.ox.ac.uk/",
+    "allowed_hosts": [
+      "oii.ox.ac.uk"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "University of Oxford research on the internet and AI in society. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 5 of 10 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "eff",
+    "name": "EFF Deeplinks",
+    "publisher": "Electronic Frontier Foundation",
+    "feed_url": "https://www.eff.org/rss/updates.xml",
+    "site_url": "https://www.eff.org/deeplinks",
+    "allowed_hosts": [
+      "eff.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education",
+        "privacy-security"
+      ]
+    },
+    "require_match": true,
+    "notes": "Digital civil liberties group; only posts with AI in the title are taken. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 5 of 50 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "pew-internet",
+    "name": "Pew Research Center",
+    "publisher": "Pew Research Center",
+    "feed_url": "https://www.pewresearch.org/feed/",
+    "site_url": "https://www.pewresearch.org/internet/",
+    "allowed_hosts": [
+      "pewresearch.org"
+    ],
+    "default_metadata": {
+      "format": "Report",
+      "evidence_type": "survey_data",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Nonpartisan surveys, including public attitudes to AI. The feed covers all topics; only titles that mention AI are taken. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 6 of 100 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "nist",
+    "name": "NIST news",
+    "publisher": "NIST",
+    "feed_url": "https://www.nist.gov/news-events/news/rss.xml",
+    "site_url": "https://www.nist.gov/artificial-intelligence",
+    "allowed_hosts": [
+      "nist.gov"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "guidance",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education",
+        "policy-governance"
+      ]
+    },
+    "require_match": true,
+    "notes": "US standards agency, home of the AI Risk Management Framework; only AI news is taken. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 8 of 40 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "google-research",
+    "name": "Google Research Blog",
+    "publisher": "Google Research",
+    "feed_url": "https://research.google/blog/rss/",
+    "site_url": "https://research.google/blog/",
+    "allowed_hosts": [
+      "research.google"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Company research blog (vendor source). General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 42 of 100 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "deepmind",
+    "name": "Google DeepMind Blog",
+    "publisher": "Google DeepMind",
+    "feed_url": "https://deepmind.google/blog/rss.xml",
+    "site_url": "https://deepmind.google/discover/blog/",
+    "allowed_hosts": [
+      "deepmind.google"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "research_summary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Company research blog (vendor source). General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 59 of 100 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "hf-blog",
+    "name": "Hugging Face Blog",
+    "publisher": "Hugging Face",
+    "feed_url": "https://huggingface.co/blog/feed.xml",
+    "site_url": "https://huggingface.co/blog",
+    "allowed_hosts": [
+      "huggingface.co"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "evidence_type": "commentary",
+      "title_only": true,
+      "collections": [
+        "ai-beyond-education"
+      ]
+    },
+    "require_match": true,
+    "notes": "Open-source AI community blog (vendor source); mostly technical. General AI, outside education. Checked 2026-10-28: valid feed over HTTPS, under 2 MB, no DTD; 12 of 100 recent items have AI in the title. Confirm the publisher's terms before enabling."
+  },
+  {
+    "id": "ai4k12",
+    "name": "AI4K12",
+    "publisher": "AI4K12",
+    "feed_url": "https://ai4k12.org/feed/",
+    "site_url": "https://ai4k12.org/",
+    "allowed_hosts": [
+      "ai4k12.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "ai-literacy"
+      ],
+      "archive": "wordpress"
+    },
+    "require_match": true,
+    "notes": "The AI4K12 initiative (Five Big Ideas in AI): K-12 AI literacy guidelines, lessons and resources. Checked 2026-11-02: valid RSS over HTTPS, 657 KB, no DTD, every item link on ai4k12.org; all 10 recent items are about AI. Posts are infrequent, so older pages are collected too."
+  },
+  {
+    "id": "futureed",
+    "name": "FutureEd",
+    "publisher": "FutureEd at Georgetown University",
+    "feed_url": "https://www.future-ed.org/feed/",
+    "site_url": "https://www.future-ed.org/",
+    "allowed_hosts": [
+      "future-ed.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "policy-governance"
+      ]
+    },
+    "require_match": true,
+    "notes": "Georgetown education policy think tank; frequent AI evidence and policy analysis. Checked 2026-11-02: valid RSS over HTTPS, 42 KB, no DTD, every item link on future-ed.org; 13 of 30 recent items are about AI."
+  },
+  {
+    "id": "internetmatters",
+    "name": "Internet Matters",
+    "publisher": "Internet Matters",
+    "feed_url": "https://www.internetmatters.org/feed/",
+    "site_url": "https://www.internetmatters.org/",
+    "allowed_hosts": [
+      "internetmatters.org"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "audiences": [
+        "Families"
+      ],
+      "collections": [
+        "for-families"
+      ]
+    },
+    "require_match": true,
+    "notes": "UK nonprofit helping parents keep children safe online; growing coverage of AI chatbots, companions and misinformation. Checked 2026-11-02: valid RSS over HTTPS, 232 KB, no DTD, item links on internetmatters.org; 7 of 10 recent items mention AI."
+  },
+  {
+    "id": "kqed-mindshift",
+    "name": "KQED MindShift",
+    "publisher": "KQED MindShift",
+    "feed_url": "https://ww2.kqed.org/mindshift/feed/",
+    "site_url": "https://www.kqed.org/mindshift",
+    "allowed_hosts": [
+      "kqed.org"
+    ],
+    "default_metadata": {
+      "format": "Article"
+    },
+    "require_match": true,
+    "notes": "Public-media coverage of K-12 teaching and learning, with regular, research-minded AI stories. Checked 2026-11-02: valid RSS over HTTPS, 173 KB, no DTD, every item link on ww2.kqed.org; 5 of 14 recent items are about AI."
+  },
+  {
+    "id": "mitsloan-edtech",
+    "name": "MIT Sloan Teaching & Learning Technologies",
+    "publisher": "MIT Sloan Teaching & Learning Technologies",
+    "feed_url": "https://mitsloanedtech.mit.edu/feed/",
+    "site_url": "https://mitsloanedtech.mit.edu/",
+    "allowed_hosts": [
+      "mitsloanedtech.mit.edu"
+    ],
+    "default_metadata": {
+      "format": "Article",
+      "collections": [
+        "professional-learning"
+      ]
+    },
+    "require_match": true,
+    "notes": "Practical guides for teaching with AI from MIT Sloan's teaching technology team; written for faculty but widely used by K-12 teachers. Checked 2026-11-02: valid RSS over HTTPS, 206 KB, no DTD, every item link on mitsloanedtech.mit.edu; 6 of 10 recent items are about AI."
+  }
+]

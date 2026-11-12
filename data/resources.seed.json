@@ -1,0 +1,821 @@
+[
+  {
+    "id": "1",
+    "url": "https://www.commonsense.org/education/families-ai-literacy-toolkit",
+    "title": "AI Literacy Toolkit for Families",
+    "publisher": "Common Sense Education",
+    "format": "Toolkit",
+    "audiences": [
+      "Families"
+    ],
+    "collections": [
+      "start-here"
+    ],
+    "why": "A family toolkit for learning about AI together at home, and a good first stop for parents.",
+    "best_for": "Families learning about AI together",
+    "published_at": null,
+    "summary": null,
+    "verification": "Publisher page opened",
+    "verification_status": "checked",
+    "featured": true,
+    "listing_url": null,
+    "read_with": [
+      {
+        "id": "17",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "url": "https://www.teachai.org/toolkit",
+    "title": "AI Guidance for Schools Toolkit",
+    "publisher": "TeachAI",
+    "format": "Toolkit",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "A toolkit for writing or updating school AI guidance, with material to adapt for your own policy.",
+    "best_for": "School teams drafting or reviewing AI guidance",
+    "published_at": null,
+    "summary": null,
+    "verification": "Publisher page opened",
+    "verification_status": "checked",
+    "featured": true,
+    "listing_url": null,
+    "read_with": [
+      {
+        "id": "28",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "url": "https://www.commonsense.org/education/collections/ai-literacy-lessons-for-grades-k-12",
+    "title": "AI Literacy Lessons for Grades K–12",
+    "publisher": "Common Sense Education",
+    "format": "Lessons",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "inside-classroom"
+    ],
+    "why": "Classroom lessons on AI literacy across grade levels, ready to teach.",
+    "best_for": "Teachers planning AI literacy lessons",
+    "published_at": null,
+    "summary": null,
+    "verification": "Publisher page opened",
+    "verification_status": "checked",
+    "featured": true,
+    "listing_url": null,
+    "read_with": [
+      {
+        "id": "18",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "url": "https://www.teachai.org/ailiteracy",
+    "title": "TeachAI: AI literacy resources",
+    "publisher": "TeachAI",
+    "format": "Collection",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "start-here"
+    ],
+    "why": "TeachAI's collection of AI literacy resources, focused on understanding AI rather than training on one tool.",
+    "best_for": "Teachers and curriculum teams",
+    "published_at": null,
+    "summary": null,
+    "verification": "Publisher page opened",
+    "verification_status": "checked",
+    "featured": false,
+    "listing_url": null,
+    "read_with": [
+      {
+        "id": "5",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "url": "https://doi.org/10.51388/20.500.12265/218",
+    "title": "AI Literacy: A Framework to Understand, Evaluate, and Use Emerging Technology",
+    "publisher": "Digital Promise",
+    "format": "Framework",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "start-here"
+    ],
+    "why": "A framework for what it means to understand, evaluate and use AI, useful for setting goals before choosing tools.",
+    "best_for": "Planning professional learning or curriculum",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": true,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "7",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "url": "https://hdl.handle.net/20.500.12265/259",
+    "title": "Glossary of Artificial Intelligence Terms for Educators (English and Spanish)",
+    "publisher": "Digital Promise",
+    "format": "Glossary",
+    "audiences": [
+      "Everyone"
+    ],
+    "collections": [
+      "start-here"
+    ],
+    "why": "Plain definitions of common AI terms for educators, in English and Spanish.",
+    "best_for": "Anyone tripped up by AI jargon",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "26",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "url": "https://doi.org/10.51388/20.500.12265/268",
+    "title": "Implementing AI Literacy Across Learning Environments",
+    "publisher": "Digital Promise",
+    "format": "Briefs",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "inside-classroom"
+    ],
+    "why": "Guidance on putting AI literacy goals into practice across classrooms and programs.",
+    "best_for": "Teams moving from goals to practice",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "5",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "url": "https://hdl.handle.net/20.500.12265/227",
+    "title": "Emerging Technology Responsible Use Policy Sample Language",
+    "publisher": "Digital Promise",
+    "format": "Template",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "Sample policy language for responsible use of AI and other emerging technology, to compare with your own draft.",
+    "best_for": "Teams revising responsible-use policies",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "2",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "url": "https://digitalpromise.org/product-certifications/resources/district-resources/",
+    "title": "Edtech Evaluation Templates for District Leaders",
+    "publisher": "Digital Promise",
+    "format": "Templates",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "Templates for evaluating edtech, including AI tools, before a purchase.",
+    "best_for": "District technology and instructional teams",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "29",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "url": "https://engageai.org/wp-content/uploads/sites/125/2025/04/An-AI-Bill-of-Rights-for-Educators-Revision-2025.03.28-2.pdf",
+    "title": "AI Bill of Rights for Educators",
+    "publisher": "Digital Promise resource listing",
+    "format": "Document",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "questions-concerns"
+    ],
+    "why": "Sets out the rights educators should have as schools adopt AI, adding teachers' voices to conversations that often center on products.",
+    "best_for": "Teachers and school leadership teams",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "11",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "url": "https://doi.org/10.51388/20.500.12265/258",
+    "title": "A National Context of Generative AI for Reading to Support English Learners",
+    "publisher": "Digital Promise",
+    "format": "Research listing",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "research-evidence"
+    ],
+    "why": "Looks at generative AI for reading instruction through the lens of English learners.",
+    "best_for": "Literacy teams and multilingual-learning specialists",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "14",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "url": "https://digitalpromise.org/initiative/exploring-the-role-of-ai-in-mathematics/",
+    "title": "Exploring the Role of AI in Mathematics",
+    "publisher": "Digital Promise",
+    "format": "Report listing",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "research-evidence"
+    ],
+    "why": "Explores how AI fits into math teaching and learning, beyond the usual focus on writing and cheating.",
+    "best_for": "Math educators and curriculum teams",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "13",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "url": "https://doi.org/10.51388/20.500.12265/273",
+    "title": "Integrating AI-Enabled EdTech in PK16 Education: Five Recommendations for State and District Leaders",
+    "publisher": "Digital Promise",
+    "format": "Recommendations",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "Five recommendations for state and district leaders on adopting AI-enabled edtech.",
+    "best_for": "State and district leaders",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "27",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "url": "https://digitalpromise.org/2026/06/23/navigating-ai-in-k-3-reading-u-gain-launches-educator-toolkit/",
+    "title": "Navigating AI in K-3 Reading: U-GAIN Launches Educator Toolkit",
+    "publisher": "Digital Promise",
+    "format": "Toolkit",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "inside-classroom"
+    ],
+    "why": "An educator toolkit on AI in K–3 reading from the U-GAIN project.",
+    "best_for": "K–3 educators and literacy teams",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "11",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "url": "https://digitalpromise.org/2026/09/09/implementing-ai-in-schools-what-teachers-need-to-make-it-work/",
+    "title": "Implementing AI in Schools: What Teachers Need to Make it Work",
+    "publisher": "Digital Promise",
+    "format": "Article",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "Looks at what teachers need from their schools to make AI implementation work.",
+    "best_for": "Leaders planning teacher support",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://digitalpromise.org/initiative/artificial-intelligence-in-education/resources/",
+    "read_with": [
+      {
+        "id": "30",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/24/09/students-are-using-ai-already-heres-what-they-think-adults-should-know",
+    "title": "Students Are Using AI Already. Here’s What They Think Adults Should Know",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Article",
+    "audiences": [
+      "Students"
+    ],
+    "collections": [
+      "student-perspectives"
+    ],
+    "why": "Students explain how they use AI and what they want adults to understand about it.",
+    "best_for": "Families, teachers and student advisory groups",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": true,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "19",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "url": "https://www.gse.harvard.edu/ideas/edcast/24/10/impact-ai-childrens-development",
+    "title": "The Impact of AI on Children’s Development",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Podcast",
+    "audiences": [
+      "Families"
+    ],
+    "collections": [
+      "for-families"
+    ],
+    "why": "Looks at how AI may affect children's development, a useful starting point for family conversations.",
+    "best_for": "Families and educators",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "1",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "url": "https://www.gse.harvard.edu/ideas/edcast/25/10/teaching-students-think-critically-about-ai",
+    "title": "Teaching Students to Think Critically About AI",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Podcast",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "questions-concerns"
+    ],
+    "why": "Approaches for helping students question and evaluate AI, not just use it.",
+    "best_for": "Teachers and professional learning groups",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": true,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "23",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/26/10/ai-cheating-crisis-schools-isnt-only-what-you-think",
+    "title": "The AI Cheating Crisis in Schools Isn’t (Only) What You Think",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Article",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "learning-thinking"
+    ],
+    "why": "Argues that the AI cheating problem in schools goes beyond catching students.",
+    "best_for": "Teachers, families and assessment teams",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "16",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/25/07/developing-ai-ethics-classroom",
+    "title": "Developing AI Ethics in the Classroom",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Article",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "inside-classroom"
+    ],
+    "why": "Ideas for teaching responsible and ethical AI use through classroom discussion.",
+    "best_for": "Teachers planning AI ethics conversations",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "21",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/23/11/better-feedback-ai",
+    "title": "Better Feedback with AI?",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Research coverage",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "research-evidence"
+    ],
+    "why": "Asks what the evidence says about using AI to give students feedback.",
+    "best_for": "Teachers and instructional leaders",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "24",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "url": "https://www.gse.harvard.edu/ideas/usable-knowledge/24/10/how-generative-ai-can-support-professional-learning-teachers",
+    "title": "How Generative AI Can Support Professional Learning for Teachers",
+    "publisher": "Harvard Graduate School of Education",
+    "format": "Article",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "inside-classroom"
+    ],
+    "why": "Ways generative AI can support teachers' own professional learning.",
+    "best_for": "Instructional coaches and workshop planners",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.gse.harvard.edu/ideas/themes/artificial-intelligence-education",
+    "read_with": [
+      {
+        "id": "23",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "url": "https://www.edutopia.org/video/jason-reynolds-on-what-ai-is-stealing-from-the-next-generation",
+    "title": "Jason Reynolds on What AI Is Quietly Stealing From the Next Generation",
+    "publisher": "Edutopia",
+    "format": "Video",
+    "audiences": [
+      "Everyone"
+    ],
+    "collections": [
+      "questions-concerns"
+    ],
+    "why": "Author Jason Reynolds on what AI may be quietly taking from young people; a personal perspective rather than research.",
+    "best_for": "Discussion groups on learning and effort",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": true,
+    "listing_url": "https://www.edutopia.org/topic/ai-in-education",
+    "read_with": [
+      {
+        "id": "18",
+        "relation": "companion"
+      }
+    ],
+    "legacy_urls": [
+      "https://www.edutopia.org/video/jason-reynolds-on-what-ai-is-stealing-from-the-next-generation?open=comments-sidebar"
+    ]
+  },
+  {
+    "id": "24",
+    "url": "https://www.edutopia.org/article/8-classroom-ai-policies-developed-by-teachers",
+    "title": "8 Classroom AI Policies Developed by Teachers",
+    "publisher": "Edutopia",
+    "format": "Article",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "inside-classroom"
+    ],
+    "why": "Eight classroom AI policies written by teachers, to compare before writing your own.",
+    "best_for": "Teachers writing assignment-level guidance",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.edutopia.org/topic/ai-in-education",
+    "read_with": [
+      {
+        "id": "21",
+        "relation": "companion"
+      }
+    ],
+    "legacy_urls": [
+      "https://www.edutopia.org/article/8-classroom-ai-policies-developed-by-teachers?open=comments-sidebar"
+    ]
+  },
+  {
+    "id": "25",
+    "url": "https://cdt.org/insights/report-off-task-edtech-threats-to-student-privacy-and-equity-in-the-age-of-ai/",
+    "title": "Off Task: EdTech Threats to Student Privacy and Equity in the Age of AI",
+    "publisher": "Center for Democracy & Technology",
+    "format": "Report",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "questions-concerns"
+    ],
+    "why": "Research on how edtech and AI can threaten student privacy and equity.",
+    "best_for": "Technology leaders and school decision-makers",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.teachai.org/policy-resources",
+    "read_with": [
+      {
+        "id": "9",
+        "relation": "companion"
+      }
+    ],
+    "legacy_urls": [
+      "https://cdt.org/insights/report-off-task-edtech-threats-to-student-privacy-and-equity-in-the-age-of-ai/#:~:text=Schools are filtering and blocking,administrators are using it to"
+    ]
+  },
+  {
+    "id": "26",
+    "url": "https://cdt.org/insights/students-use-of-generative-ai-the-threat-of-hallucinations/",
+    "title": "Students’ Use of Generative AI: The Threat of Hallucinations",
+    "publisher": "Center for Democracy & Technology",
+    "format": "Article",
+    "audiences": [
+      "Students"
+    ],
+    "collections": [
+      "questions-concerns"
+    ],
+    "why": "Why AI tools sometimes make things up, and why students need to check what AI tells them.",
+    "best_for": "Students, families and teachers",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.teachai.org/policy-resources",
+    "read_with": [
+      {
+        "id": "6",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "url": "https://www.brookings.edu/articles/ai-and-the-next-digital-divide-in-education/",
+    "title": "AI and the next digital divide in education",
+    "publisher": "Brookings",
+    "format": "Article",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "questions-concerns"
+    ],
+    "why": "Examines who may be left behind as AI arrives in schools.",
+    "best_for": "Leaders reviewing who benefits from AI adoption",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.teachai.org/policy-resources",
+    "read_with": [
+      {
+        "id": "13",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "url": "https://unesdoc.unesco.org/ark:/48223/pf0000386693",
+    "title": "Guidance for Generative AI in Education and Research",
+    "publisher": "UNESCO",
+    "format": "Guidance",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "UNESCO's global guidance on generative AI in education and research.",
+    "best_for": "School leaders and policy groups",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.teachai.org/policy-resources",
+    "read_with": [
+      {
+        "id": "2",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "url": "https://www.cgcs.org/genaichecklist",
+    "title": "K-12 Generative AI Readiness Checklist",
+    "publisher": "CoSN and Council of the Great City Schools",
+    "format": "Checklist",
+    "audiences": [
+      "Administrators"
+    ],
+    "collections": [
+      "school-district-leadership"
+    ],
+    "why": "A checklist to gauge whether a district is ready to roll out generative AI.",
+    "best_for": "District teams planning implementation",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": true,
+    "listing_url": "https://www.teachai.org/toolkit",
+    "read_with": [
+      {
+        "id": "9",
+        "relation": "companion"
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "url": "https://code.org/ai/pl/101",
+    "title": "AI 101 for Teachers",
+    "publisher": "Code.org",
+    "format": "Course",
+    "audiences": [
+      "Teachers"
+    ],
+    "collections": [
+      "start-here"
+    ],
+    "why": "An introductory course on AI for teachers who are new to the topic.",
+    "best_for": "Teachers beginning to learn about AI",
+    "published_at": null,
+    "summary": null,
+    "verification": "Linked from opened publisher page; destination not individually reviewed",
+    "verification_status": "unverified",
+    "featured": false,
+    "listing_url": "https://www.teachai.org/toolkit",
+    "read_with": [
+      {
+        "id": "15",
+        "relation": "companion"
+      }
+    ]
+  }
+]
