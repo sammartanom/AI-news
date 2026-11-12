@@ -143,6 +143,10 @@ async function listView(kind) {
   const search = h('input', { type: 'search', class: 'ed-search', placeholder: kind === 'review' ? 'Search waiting items' : 'Search the library', 'aria-label': 'Search by title or publisher', value: st.q });
   const total = h('p', { class: 'ed-total muted', role: 'status' });
   const bulk = h('div', { class: 'ed-bulk', hidden: true });
+  // "Select all": ticks every item shown; when more are waiting than are shown, the bar offers all of them.
+  const all = h('input', { type: 'checkbox', 'aria-label': 'Select all' });
+  const listHead = h('div', { class: 'ed-list-head', hidden: true }, h('label', { class: 'ed-row-check' }, all), h('span', {}, 'Select all'));
+  let lastTotal = 0;
   const list = h('ul', { class: 'ed-list', 'aria-label': kind === 'review' ? 'Waiting for review' : 'Library' });
   const more = h('div', { class: 'ed-more-row' });
   const detail = h('div', { class: 'ed-detail', hidden: true });
@@ -152,7 +156,7 @@ async function listView(kind) {
   fill(root,
     h('div', { class: 'ed-page-head' }, h('h1', {}, kind === 'review' ? 'Review' : 'Library'), total),
     h('div', { class: 'ed-toolbar' }, chips, search), bulk,
-    h('div', { class: 'ed-split' }, h('div', { class: 'ed-list-col' }, list, more), pane));
+    h('div', { class: 'ed-split' }, h('div', { class: 'ed-list-col' }, listHead, list, more), pane));
 
   let timer = null;
   search.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { st.q = search.value.trim(); load(true); }, 250); });
@@ -162,10 +166,36 @@ async function listView(kind) {
       label, s && n(s) !== undefined ? h('span', { class: 'n num' }, String(n(s) ?? 0)) : null)));
   }
 
+  const boxes = () => [...list.querySelectorAll('li[data-id] .ed-row-check input')];
+  function syncAll() {
+    const b = boxes();
+    const n = b.filter((x) => x.checked).length;
+    listHead.hidden = !b.length;
+    all.checked = b.length > 0 && n === b.length;
+    all.indeterminate = n > 0 && n < b.length;
+  }
+  function tickAll(on) {
+    for (const b of boxes()) {
+      b.checked = on;
+      const id = b.closest('li').dataset.id;
+      if (on) selected.add(id); else selected.delete(id);
+    }
+    paintBulk();
+  }
+  all.addEventListener('change', () => tickAll(all.checked));
+  async function selectEverything() {
+    bulk.querySelector('.ed-all-more')?.setAttribute('disabled', '');
+    while (offset < lastTotal) { const before = offset; await load(false); if (offset === before) break; }
+    tickAll(true);
+  }
+
   function paintBulk() {
+    syncAll();
     bulk.hidden = !selected.size;
     if (!selected.size) return;
+    const everyShown = all.checked && offset < lastTotal;
     fill(bulk, h('span', {}, `${selected.size} selected`),
+      everyShown ? h('button', { class: 'btn btn-quiet ed-all-more', type: 'button', onclick: selectEverything }, `Select all ${lastTotal.toLocaleString()}`) : null,
       kind === 'review' ? h('button', { class: 'btn', type: 'button', onclick: () => bulkAct('publish') }, icon('check', 16), 'Publish') : null,
       removedView() ? h('button', { class: 'btn', type: 'button', onclick: () => bulkAct('restore') }, icon('undo', 16), 'Restore')
         : h('button', { class: 'btn btn-danger', type: 'button', onclick: () => bulkAct('remove') }, icon('trash', 16), 'Remove'),
@@ -242,11 +272,13 @@ async function listView(kind) {
       if (reset) fill(list);
       d.items.forEach((r) => list.append(row(r)));
       offset += d.items.length;
+      lastTotal = d.total;
       total.textContent = `${d.total.toLocaleString()} ${st.q ? 'matching' : filters.find((f) => f[0] === st.filter)[1].toLowerCase()}`;
       if (reset && !d.items.length) list.append(h('li', { class: 'ed-empty' }, st.q ? 'Nothing matches that search.' : kind === 'review' ? 'All caught up. Nothing is waiting.' : 'Nothing here.'));
       fill(more, offset < d.total ? h('button', { class: 'btn', type: 'button', onclick: () => load(false) }, `Show more (${(d.total - offset).toLocaleString()} left)`) : null);
     } catch (e) { fill(list, h('li', { class: 'ed-empty error' }, e.message)); }
     list.classList.remove('loading');
+    paintBulk();
   }
 
   async function reload() { paintChips(await refreshCounts()); await load(true); }

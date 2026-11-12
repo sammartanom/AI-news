@@ -495,6 +495,41 @@ test('editor console: review an incoming item, publish it, then it is public', a
   await context.close();
 });
 
+test('editor console: Select all ticks every item shown, then every waiting item, for one bulk action', async () => {
+  const api = (path, init) => fetch(ctx.server.url + path, { ...init, headers: { 'content-type': 'application/json', origin: ctx.server.url, cookie: 'signal-dev-user=editor@signal.test' } });
+  for (let i = 0; i < 42; i++) await api('/api/editor/resources', { method: 'POST', body: JSON.stringify({ url: `https://example.org/okapi-${i}`, title: `Okapi bulk item ${i}`, publisher: 'Vendor' }) });
+  const { page, context, errors } = await open(ctx, '/editor/', { user: 'editor@signal.test' });
+  await page.locator('.ed-search').fill('Okapi bulk');
+  await page.getByText('Show more (2 left)').waitFor();
+  const all = page.getByRole('checkbox', { name: 'Select all' });
+  const rows = page.locator('li[data-id] .ed-row-check input');
+  assert.equal(await rows.count(), 40);
+  await all.check();
+  await page.locator('.ed-bulk').getByText('40 selected').waitFor();
+  assert.equal(await rows.evaluateAll((els) => els.filter((e) => e.checked).length), 40);
+  // More are waiting than are shown: one more click takes all of them.
+  await page.locator('.ed-bulk').getByRole('button', { name: 'Select all 42' }).click();
+  await page.locator('.ed-bulk').getByText('42 selected').waitFor();
+  assert.equal(await rows.count(), 42);
+  // Unticking one leaves Select all part-ticked.
+  await rows.nth(0).uncheck();
+  await page.locator('.ed-bulk').getByText('41 selected').waitFor();
+  assert.equal(await all.evaluate((e) => e.indeterminate), true);
+  await page.locator('.ed-bulk').getByRole('button', { name: 'Remove' }).click();
+  await page.locator('#toast').getByText('Removed 41 items.').waitFor({ timeout: 60000 });
+  assert.equal((await (await api('/api/editor/queue?status=indexed&q=Okapi%20bulk')).json()).total, 1);
+  await page.locator('#toast').getByRole('button', { name: 'Undo' }).click();
+  await page.locator('#toast').getByText('Put back.').waitFor({ timeout: 60000 });
+  assert.equal((await (await api('/api/editor/queue?status=indexed&q=Okapi%20bulk')).json()).total, 42);
+  // Clearing unticks everything, Select all included.
+  await all.check();
+  await page.locator('.ed-bulk').getByRole('button', { name: 'Clear' }).click();
+  assert.equal(await all.isChecked(), false);
+  assert.equal(await page.locator('.ed-bulk').isHidden(), true);
+  assert.deepEqual(errors, []);
+  await context.close();
+});
+
 test('editor console: remove takes an item off with undo; bulk remove; non-editors and anonymous users are turned away', async () => {
   const api = (path, init) => fetch(ctx.server.url + path, { ...init, headers: { 'content-type': 'application/json', origin: ctx.server.url, cookie: 'signal-dev-user=editor@signal.test' } });
   await api('/api/editor/resources', { method: 'POST', body: JSON.stringify({ url: 'https://example.org/e2e-reject', title: 'Giraffe vendor press release', publisher: 'Vendor' }) });
@@ -516,8 +551,8 @@ test('editor console: remove takes an item off with undo; bulk remove; non-edito
   // Library: tick two, remove both, then find them under Removed and restore one.
   await page.locator('[data-tab=library]').click();
   const before = (await (await api('/api/editor/summary')).json()).counts.published;
-  await page.locator('.ed-row-check input').nth(0).check();
-  await page.locator('.ed-row-check input').nth(1).check();
+  await page.locator('li[data-id] .ed-row-check input').nth(0).check();
+  await page.locator('li[data-id] .ed-row-check input').nth(1).check();
   await page.locator('.ed-bulk').getByRole('button', { name: 'Remove' }).click();
   await page.locator('#toast').getByText('Removed 2 items.').waitFor();
   assert.equal((await (await api('/api/editor/summary')).json()).counts.published, before - 2);
