@@ -3,6 +3,7 @@ import { json, HttpError } from './lib/http.mjs';
 import { currentUser } from './auth/session.mjs';
 import { editorDevice } from './auth/device.mjs';
 import { runScheduled } from './jobs.mjs';
+import { ensureSchema } from './db/migrate.mjs';
 import './routes/public.mjs';
 import './routes/me.mjs';
 import './routes/vault.mjs';
@@ -24,6 +25,7 @@ export async function handle(req, env, exec) {
       if (path.startsWith('/api/')) throw new HttpError(404, 'Not found');
       return env.ASSETS ? env.ASSETS.fetch(req) : new Response('Not found', { status: 404 });
     }
+    await ensureSchema(env); // a brand-new, empty database sets itself up on first use
     const c = { req, env, url, params, exec, user: null, device: false };
     if (NEEDS_USER.test(path)) [c.user, c.device] = await Promise.all([currentUser(req, env), editorDevice(req, env)]);
     const out = await handler(c);
@@ -39,6 +41,6 @@ export async function handle(req, env, exec) {
 export default {
   fetch: handle,
   async scheduled(event, env, exec) {
-    exec.waitUntil(runScheduled(env, event.cron));
+    exec.waitUntil(ensureSchema(env).then(() => runScheduled(env, event.cron)));
   }
 };

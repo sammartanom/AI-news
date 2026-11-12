@@ -35,6 +35,7 @@ The deploy command deliberately does not apply migrations.
 Migrations are numbered SQL files in `migrations/`. Rules:
 
 - **Additive only.** New tables, new columns with defaults, new indexes, data backfills. `npm run check` fails on `DROP`, `DELETE FROM`, `TRUNCATE` or `RENAME` in a migration unless the file carries a `-- allow-destructive: <reason>` comment, so a destructive change needs a deliberate, reviewable choice.
+- **Regenerate the bundled schema.** After adding a migration, run `node scripts/build-schema.mjs`. The Worker uses `src/db/schema.generated.mjs` to set up an empty database by itself on first use; a test fails if it is out of date.
 - **Never edit an applied migration.** Add a new one. `0001_init.sql` in particular is shared with databases created by the original project.
 - **Expand and contract** for anything that would break running code: add the new shape, deploy code that writes both, backfill, deploy code that reads the new shape, and only later remove the old shape in its own reviewed migration.
 

@@ -4,24 +4,25 @@ Everything here happens in the Cloudflare dashboard and the site's own editor. N
 
 ## Already done
 
-- **Database.** The D1 database `ai-news` (id `23ed53a8-9711-4938-a7fb-b4d78214425a`) exists with every migration applied, the 30 starter resources and 123 vetted feeds (118 on, publishing automatically).
+- **Database.** Nothing to create. The first deploy creates a D1 database named `ai-news` in whichever Cloudflare account you connect, and the site creates its tables the first time it runs.
 - **Privacy settings.** No accounts, Cloudflare request logs off, no donate link. See [docs/PRIVACY.md](docs/PRIVACY.md).
 - **Search** works without a Vectorize index (keyword search, the AI search helper and the AI reranker). Search by meaning is off because an index can only be created from the command line; see `wrangler.jsonc` to add it later.
 
 ## 1. Create the Worker from GitHub
 
-1. Go to https://dash.cloudflare.com and sign in to the same account as Signal.
-2. In the left sidebar choose **Compute (Workers)** → **Workers & Pages**.
-3. Click **Create application** (top right).
-4. Choose **Import a repository** (or **Continue with GitHub**).
-5. If GitHub is not connected, or `AI-news` is not listed: choose **Add account** / **Connect GitHub**, pick the **sammartanom** account, and allow access to the **AI-news** repository.
-6. Select **AI-news**.
-7. Fill in:
+1. Go to https://dash.cloudflare.com and sign in to the account you want the site in.
+2. If you can see more than one account, pick the right one first (account menu, top left).
+3. In the left sidebar choose **Compute (Workers)** → **Workers & Pages**.
+4. Click **Create application** (top right).
+5. Choose **Import a repository** (or **Continue with GitHub**).
+6. If GitHub is not connected, or `AI-news` is not listed: choose **Add account** / **Connect GitHub**, pick the **sammartanom** account, and allow access to the **AI-news** repository.
+7. Select **AI-news**.
+8. Fill in:
    - **Project name:** `ai-news` (must match exactly)
    - **Build command:** `npm ci && npm run ci`
    - **Deploy command:** `npx wrangler deploy`
    - Leave the root directory empty.
-8. Click **Create and deploy** (or **Deploy**). The first build takes 2 to 4 minutes. It turns green when done.
+9. Click **Create and deploy** (or **Deploy**). The first build takes 2 to 4 minutes. It turns green when done.
 
 Every change merged to `main` deploys the same way from now on.
 

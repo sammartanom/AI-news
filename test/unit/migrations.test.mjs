@@ -96,3 +96,39 @@ test('constraints reject invalid values', async () => {
   await assert.rejects(run(`UPDATE resources SET canonical_url='https://e.org/c' WHERE id='z'`)); // canonical unique
   await assert.rejects(run(`INSERT INTO board_items(board_id,resource_id) VALUES ('nope','x')`)); // foreign keys enforced
 });
+
+test('an empty database sets itself up on first use, exactly as the migration files would', async () => {
+  const { ensureSchema, resetSchemaCheck } = await import('../../src/db/migrate.mjs');
+  const { MIGRATIONS } = await import('../../src/db/schema.generated.mjs');
+  const { schemaModule } = await import('../../scripts/lib/schema.mjs');
+  assert.equal(readFileSync(new URL('../../src/db/schema.generated.mjs', import.meta.url), 'utf8'), schemaModule(migrationFiles()), 'run: node scripts/build-schema.mjs');
+
+  const objects = async (db) => (await db.prepare("SELECT type, name, tbl_name FROM sqlite_master WHERE name NOT LIKE 'sqlite_%' AND name <> 'd1_migrations' ORDER BY type, name").all()).results;
+  const empty = new D1Shim();
+  resetSchemaCheck();
+  assert.deepEqual(await ensureSchema({ DB: empty }), { created: true, migrations: MIGRATIONS.length });
+  assert.deepEqual(await objects(empty), await objects(freshDb()));
+  assert.deepEqual((await empty.prepare('SELECT name FROM d1_migrations ORDER BY id').all()).results.map((r) => r.name), migrationFiles().map((m) => m.name));
+  const cols = async (db) => (await db.prepare("SELECT count(*) n FROM pragma_table_info('resources')").first()).n;
+  assert.equal(await cols(empty), await cols(freshDb()));
+  // Search works on the new tables, and the starter topics and collections are there.
+  await empty.prepare("INSERT INTO resources(id, url, title, publisher, status) VALUES ('a', 'https://x.org/a', 'Feedback with AI', 'P', 'published')").run();
+  assert.equal((await empty.prepare("SELECT count(*) n FROM resources_fts WHERE resources_fts MATCH 'feedback'").first()).n, 1);
+  assert.equal((await empty.prepare('SELECT count(*) n FROM topics').first()).n, 17);
+
+  resetSchemaCheck();
+  assert.deepEqual(await ensureSchema({ DB: empty }), { created: false }, 'a database with tables is left alone');
+  resetSchemaCheck();
+});
+
+test('the Worker sets up an empty database before its first request', async () => {
+  const { resetSchemaCheck } = await import('../../src/db/migrate.mjs');
+  const { handle } = await import('../../src/index.mjs');
+  resetSchemaCheck();
+  const DB = new D1Shim();
+  const res = await handle(new Request('https://x.test/api/resources'), { DB }, { waitUntil() {} });
+  assert.equal(res.status, 200);
+  assert.deepEqual((await res.json()).resources, []);
+  assert.equal((await DB.prepare('SELECT count(*) n FROM d1_migrations').first()).n, migrationFiles().length);
+  resetSchemaCheck();
+});
