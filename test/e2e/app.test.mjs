@@ -819,10 +819,15 @@ test('editor console: the Activity tab downloads a backup of the catalogue', asy
   const download = page.waitForEvent('download');
   await page.getByRole('button', { name: 'Download a backup' }).click();
   const file = await download;
-  assert.match(file.suggestedFilename(), /^signal-backup-\d{4}-\d{2}-\d{2}\.json$/);
+  assert.match(file.suggestedFilename(), /^backup-\d{4}-\d{2}-\d{2}\.json$/);
   const data = JSON.parse(await (await import('node:fs/promises')).readFile(await file.path(), 'utf8'));
   assert.ok(data.tables.resources.length >= 30);
   assert.ok(Array.isArray(data.tables.resource_relations));
   assert.equal(data.tables.vault_blobs, undefined);
+  // The same file imported back: everything is already here, so nothing is added or changed.
+  await page.locator('#import-file').setInputFiles(await file.path());
+  const done = page.locator('.ed-msg', { hasText: /^Imported:/ });
+  await done.waitFor({ timeout: 30000 });
+  assert.match(await done.innerText(), /^Imported: 0 sources, 0 resources, 0 resource relations, 0 topic pins, 0 digests\. Already here and left alone: \d+/);
   await context.close();
 });

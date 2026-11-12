@@ -327,3 +327,48 @@ test('editor backup: pages through catalogue tables only, editors only', async (
   assert.ok(!first.data.tables.includes('vault_blobs'));
   assert.equal((await ed('/api/editor/export?table=vault_blobs')).status, 400);
 });
+
+test('editor import: a backup from another site is added a few rows at a time, without changing what is here', async () => {
+  const from = await makeEnv({ vars: { BOOTSTRAP_EDITOR_EMAILS: 'ed@school.org' } }); // the 30 seed resources
+  await addResource(from, { id: 'only-there', title: 'Only on the other site', why: 'A reason.' });
+  await backfill(from, { limit: 100 });
+  const src = client(from, 'ed@school.org');
+  const backup = {};
+  for (const t of ['sources', 'resources', 'resource_relations', 'topic_pins', 'digests']) {
+    backup[t] = [];
+    for (let offset = 0; offset !== null;) {
+      const page = (await src(`/api/editor/export?table=${t}&offset=${offset}&limit=200`)).data;
+      backup[t].push(...page.rows);
+      offset = page.next;
+    }
+  }
+  assert.ok(backup.resources.find((r) => r.id === 'only-there').embedding_version, 'embedded on the old site');
+
+  const to = await makeEnv({ seed: false, vars: { BOOTSTRAP_EDITOR_EMAILS: 'ed@school.org' } });
+  await addResource(to, { id: '1', title: 'Kept as it is here', why: 'Local.' }); // same id as a seed resource
+  const ed = client(to, 'ed@school.org');
+  assert.ok([401, 403].includes((await client(to)('/api/editor/import', { method: 'POST', body: { table: 'resources', rows: [] } })).status));
+  assert.equal((await ed('/api/editor/import', { method: 'POST', body: { table: 'vault_blobs', rows: [] } })).status, 400);
+  assert.equal((await ed('/api/editor/import', { method: 'POST', body: { table: 'resources', rows: Array.from({ length: 51 }, (_, i) => ({ id: 'x' + i })) } })).status, 400);
+
+  let added = 0;
+  for (const t of Object.keys(backup)) {
+    for (let i = 0; i < backup[t].length; i += 50) {
+      const rows = backup[t].slice(i, i + 50).map((r) => ({ ...r, not_a_column: 'ignored' }));
+      const r = await ed('/api/editor/import', { method: 'POST', body: { table: t, rows } });
+      assert.equal(r.status, 200, JSON.stringify(r.data));
+      if (t === 'resources') added += r.data.added;
+    }
+  }
+  assert.equal(added, backup.resources.length - 1, 'every resource but the one already here');
+  const count = async (sql) => (await to.DB.prepare(sql).first()).n;
+  assert.equal(await count('SELECT count(*) n FROM resources'), backup.resources.length);
+  assert.equal(await count('SELECT count(*) n FROM resource_relations'), backup.resource_relations.length);
+  assert.equal((await to.DB.prepare("SELECT title FROM resources WHERE id = '1'").first()).title, 'Kept as it is here');
+  assert.equal(await count("SELECT count(*) n FROM resources WHERE embedding_version IS NOT NULL AND id <> '1'"), 0, 'search vectors are rebuilt here');
+  const found = await client(to)('/api/search?q=' + encodeURIComponent('Only on the other site'));
+  assert.ok(found.data.results.some((r) => r.id === 'only-there'), 'imported resources are searchable by keyword at once');
+
+  const again = await ed('/api/editor/import', { method: 'POST', body: { table: 'resources', rows: backup.resources.slice(0, 50) } });
+  assert.equal(again.data.added, 0, 'running it twice adds nothing');
+});

@@ -1,52 +1,54 @@
 # Setup: what is left for you to do
 
-Only steps that need your Cloudflare or GitHub account, all in the dashboards. Everything else is in the repository.
+Everything here happens in the Cloudflare dashboard and the site's own editor. No command line.
 
 ## Already done
 
-- **Database.** The D1 database `ai-news` (id `23ed53a8-9711-4938-a7fb-b4d78214425a`) exists in the Cloudflare account, with every migration applied. It holds the 30 starter resources and 123 vetted feeds. The feeds are switched on and publish automatically, so the library fills itself over the first days.
+- **Database.** The D1 database `ai-news` (id `23ed53a8-9711-4938-a7fb-b4d78214425a`) exists with every migration applied, the 30 starter resources and 123 vetted feeds (118 on, publishing automatically).
 - **Privacy settings.** No accounts, Cloudflare request logs off, no donate link. See [docs/PRIVACY.md](docs/PRIVACY.md).
+- **Search** works without a Vectorize index (keyword search, the AI search helper and the AI reranker). Search by meaning is off because an index can only be created from the command line; see `wrangler.jsonc` to add it later.
 
-## 1. Create the search index
+## 1. Create the Worker from GitHub
 
-Cloudflare dashboard → **Storage & databases** → **Vectorize** → **Create index**:
+1. Go to https://dash.cloudflare.com and sign in to the same account as Signal.
+2. In the left sidebar choose **Compute (Workers)** → **Workers & Pages**.
+3. Click **Create application** (top right).
+4. Choose **Import a repository** (or **Continue with GitHub**).
+5. If GitHub is not connected, or `AI-news` is not listed: choose **Add account** / **Connect GitHub**, pick the **sammartanom** account, and allow access to the **AI-news** repository.
+6. Select **AI-news**.
+7. Fill in:
+   - **Project name:** `ai-news` (must match exactly)
+   - **Build command:** `npm ci && npm run ci`
+   - **Deploy command:** `npx wrangler deploy`
+   - Leave the root directory empty.
+8. Click **Create and deploy** (or **Deploy**). The first build takes 2 to 4 minutes. It turns green when done.
 
-- Name: `ai-news-resources`
-- Dimensions: `768`
-- Metric: `cosine`
+Every change merged to `main` deploys the same way from now on.
 
-Do this before step 2: the first deploy fails if the index does not exist.
+## 2. Set the editor password
 
-## 2. Create the Worker from GitHub
+1. Open the new **ai-news** Worker → **Settings** → **Variables and Secrets** → **Add**.
+2. **Type:** Secret. **Variable name:** `ADMIN_TOKEN`. **Value:** a long random password (at least 24 characters). Keep it somewhere safe: anyone with it can edit the library.
+3. Click **Deploy** (or **Save**).
 
-Cloudflare dashboard → **Workers & Pages** → **Create** → **Import a repository** → **GitHub**. If `sammartanom/AI-news` is not listed, choose to add a GitHub account and give the Cloudflare app access to that repository.
+## 3. Open the site
 
-- Project name: `ai-news` (it must match `name` in `wrangler.jsonc`)
-- Production branch: `main`
-- Build command: `npm ci && npm run ci`
-- Deploy command: `npx wrangler deploy`
+On the Worker's **Overview** (or **Settings** → **Domains & Routes**) you will see the address, `https://ai-news.<your-subdomain>.workers.dev`.
 
-Every merge to `main` then deploys automatically. The site appears at `https://ai-news.<your-subdomain>.workers.dev`.
+## 4. Copy Signal's library across
 
-## 3. Set the editor password
+1. On Signal, open `/editor/` → **Activity** → **Download a backup**. Wait until it says "Backup downloaded".
+2. On the new site, open `/editor/`, paste the `ADMIN_TOKEN`, then **Activity** → **Import a backup** → choose the file you just downloaded.
+3. Leave the tab open until it says "Imported: …" (a few minutes for a few thousand resources). If it stops, run it again: nothing is added twice, and nothing already here is changed.
 
-Open the Worker → **Settings** → **Variables and Secrets** → **Add** → type **Secret**, name `ADMIN_TOKEN`, with a long random value (at least 24 characters). Keep it private: anyone who has it can edit the library. Replacing it signs every device out.
+Resources, their AI briefs, feeds, links between resources, topic pins and past digests all come across. Resources Signal removed come across as removed, so the feeds do not add them again.
 
-## 4. Check that logs are off
-
-Open the Worker → **Settings** → **Observability**. Workers Logs should be off; `wrangler.jsonc` turns them off on every deploy. Leave them off so no request data is kept.
-
-## 5. Build the search index
-
-Open `/editor/` on the site, paste the `ADMIN_TOKEN`, then **Feeds** → **Run scheduled jobs now** → **Update search**. Repeat until it reports nothing remaining. Feeds are read every two hours from then on; new items are added to search automatically.
-
-## 6. Optional
+## Optional
 
 - **A district web address.** Worker → **Settings** → **Domains & Routes** → **Add** → **Custom domain** (the domain must be on Cloudflare).
-- **Protect `main`.** In GitHub, require pull requests and the `test` check before merging.
-- **Feeds.** Pause or remove any source in `/editor/` → **Feeds**. Read each publisher's terms of use.
-- **Ask.** The optional AI answer is off. To turn it on, set `CHAT_MODEL` and `ENABLE_AI_ANSWERS` in `wrangler.jsonc` after a privacy review.
+- **Logs.** Worker → **Settings** → **Observability**: leave Workers Logs off so no request data is kept. `wrangler.jsonc` keeps them off on every deploy.
+- **Feeds.** Pause or remove any source in `/editor/` → **Feeds**.
 
 ## Backups
 
-In `/editor/` → **Activity** → **Download a backup**. Cloudflare also keeps 7 days of database history (Time Travel).
+`/editor/` → **Activity** → **Download a backup**. Cloudflare also keeps 7 days of database history (Time Travel).

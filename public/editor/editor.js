@@ -724,7 +724,7 @@ function backupBox() {
         }
       }
       const url = URL.createObjectURL(new Blob([JSON.stringify(out)], { type: 'application/json' }));
-      const a = h('a', { href: url, download: `signal-backup-${out.exported_at.slice(0, 10)}.json` });
+      const a = h('a', { href: url, download: `backup-${out.exported_at.slice(0, 10)}.json` });
       document.body.append(a); a.click(); a.remove();
       setTimeout(() => URL.revokeObjectURL(url), 2000);
       flash(msg, `Backup downloaded: ${Object.entries(out.tables).map(([t, r]) => `${r.length} ${t.replace(/_/g, ' ')}`).join(', ')}.`);
@@ -737,12 +737,49 @@ function backupBox() {
     btn, msg);
 }
 
+// Adds everything in a backup file (from this site or from Signal) that is not here yet. The file is
+// read in the browser and sent a few rows at a time; nothing already here is changed.
+const IMPORT_ORDER = ['sources', 'resources', 'resource_relations', 'topic_pins', 'digests'];
+function importBox() {
+  const msg = h('p', { class: 'ed-msg', role: 'status' });
+  const input = h('input', { type: 'file', accept: 'application/json,.json', class: 'sr', id: 'import-file' });
+  const btn = h('button', { class: 'btn', type: 'button', onclick: () => input.click() }, 'Import a backup');
+  input.addEventListener('change', async () => {
+    const file = input.files?.[0];
+    input.value = '';
+    if (!file) return;
+    btn.disabled = true;
+    try {
+      flash(msg, 'Reading the file\u2026');
+      const data = JSON.parse(await file.text());
+      if (!data?.tables || typeof data.tables !== 'object') throw new Error('this is not a backup file');
+      const totals = {};
+      for (const t of IMPORT_ORDER) {
+        const rows = Array.isArray(data.tables[t]) ? data.tables[t] : [];
+        totals[t] = { added: 0, skipped: 0 };
+        for (let i = 0; i < rows.length; i += 50) {
+          flash(msg, `Importing ${t.replace(/_/g, ' ')}: ${Math.min(i, rows.length)} of ${rows.length}`);
+          const r = await api.post('/api/editor/import', { table: t, rows: rows.slice(i, i + 50) });
+          totals[t].added += r.added; totals[t].skipped += r.skipped;
+        }
+      }
+      flash(msg, `Imported: ${IMPORT_ORDER.map((t) => `${totals[t].added} ${t.replace(/_/g, ' ')}`).join(', ')}. Already here and left alone: ${IMPORT_ORDER.reduce((n, t) => n + totals[t].skipped, 0)}. Next, open Feeds and run Update search until nothing remains.`);
+    } catch (e) { flash(msg, `The import stopped: ${e.message}. Run it again to carry on; nothing is added twice.`, true); }
+    btn.disabled = false;
+  });
+  return h('section', { class: 'ed-backup' },
+    h('h2', {}, 'Import'),
+    h('p', {}, 'Add everything from a backup file (from this site or from Signal) that is not here yet: resources, sources, links between resources, topic pins and digests. Nothing already here is changed, so it is safe to run more than once.'),
+    h('label', { class: 'sr', for: 'import-file' }, 'Backup file'), input, btn, msg);
+}
+
 async function activityTab() {
   fill(root, h('h1', {}, 'Activity'), h('p', { class: 'status', role: 'status' }, 'Loading'));
   try {
     const [runs, audit] = await Promise.all([api.get('/api/editor/ingestion'), api.get('/api/editor/audit?limit=100')]);
     fill(root, h('h1', {}, 'Activity'),
       backupBox(),
+      importBox(),
       h('h2', {}, 'Recent ingestion runs'),
       runs.runs.length ? h('table', { class: 'ed-table' }, h('thead', {}, h('tr', {}, ['Started', 'Source', 'Result', 'New', 'Flagged', 'Known', 'Filtered'].map((x) => h('th', { scope: 'col' }, x)))),
         h('tbody', {}, runs.runs.map((r) => h('tr', {}, h('td', { class: 'num' }, when(r.started_at)), h('td', {}, r.source ?? ''), h('td', {}, r.status, r.error ? h('div', { class: 'ed-flag' }, r.error) : null), h('td', {}, String(r.new_count)), h('td', {}, String(r.flagged_count)), h('td', {}, String(r.duplicate_count)), h('td', {}, String(r.filtered_count)))))) : h('p', { class: 'empty' }, 'No runs yet.'),

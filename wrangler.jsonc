@@ -28,9 +28,10 @@
     }
   ],
 
-  // 768 dimensions, cosine. Embeddings come from @cf/baai/bge-base-en-v1.5 with mean pooling;
-  // see src/search/embedding.mjs.
-  "vectorize": [{ "binding": "VECTORIZE", "index_name": "ai-news-resources" }],
+  // Search by meaning (Vectorize) is off: an index can only be created from the command line, not
+  // the dashboard. Search still works: keyword search, the AI search helper and the AI reranker.
+  // To turn it on later, create the index (768 dimensions, cosine) and add:
+  //   "vectorize": [{ "binding": "VECTORIZE", "index_name": "ai-news-resources" }],
   "ai": { "binding": "AI" },
 
   // Ingestion, maintenance and AI briefs. Keep in sync with CRON_INGEST, CRON_DAILY and CRON_BRIEFS in src/jobs.mjs.

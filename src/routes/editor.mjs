@@ -340,6 +340,40 @@ route('GET', '/api/editor/export', async (c) => {
   return json({ table, tables: EXPORT_TABLES, offset, rows, next: rows.length === limit ? offset + limit : null }, 200, { 'Cache-Control': 'no-store' });
 });
 
+// Restore: the other half of the backup. The editor page reads a backup file in the browser and
+// sends it here a few rows at a time (small requests stay well inside the Worker's limits). Rows
+// are added with INSERT OR IGNORE, so anything already here is kept and running it twice is safe.
+// Only columns this database has are written. Search vectors are not in a backup, so imported
+// resources are marked for "Update search" to embed again.
+const IMPORT_TABLES = ['sources', 'resources', 'resource_relations', 'topic_pins', 'digests'];
+const IMPORT_MAX = 50;
+const columnCache = new Map();
+async function tableColumns(env, table) {
+  if (!columnCache.has(table)) columnCache.set(table, (await env.DB.prepare(`SELECT name FROM pragma_table_info('${table}')`).all()).results.map((r) => r.name));
+  return columnCache.get(table);
+}
+const NOT_IMPORTED = { resources: ['embedding_model', 'embedding_version', 'embedding_hash', 'embedded_at'] };
+route('POST', '/api/editor/import', async (c) => {
+  const who = guard(c);
+  const body = await readJson(c.req, 2_000_000);
+  const table = body?.table;
+  if (!IMPORT_TABLES.includes(table)) throw new HttpError(400, 'Unknown table', { tables: IMPORT_TABLES });
+  const rows = Array.isArray(body.rows) ? body.rows : null;
+  if (!rows || rows.length > IMPORT_MAX) throw new HttpError(400, `Send between 0 and ${IMPORT_MAX} rows at a time`);
+  const known = (await tableColumns(c.env, table)).filter((k) => !(NOT_IMPORTED[table] ?? []).includes(k));
+  const stmts = [];
+  for (const row of rows) {
+    if (!row || typeof row !== 'object' || Array.isArray(row)) continue;
+    const cols = known.filter((k) => k in row && (row[k] === null || ['string', 'number'].includes(typeof row[k])));
+    if (!cols.length) continue;
+    stmts.push(c.env.DB.prepare(`INSERT OR IGNORE INTO ${table}(${cols.join(',')}) VALUES (${cols.map(() => '?').join(',')})`).bind(...cols.map((k) => row[k])));
+  }
+  let added = 0;
+  if (stmts.length) added = (await c.env.DB.batch(stmts)).reduce((n, r) => n + (r.meta?.changes ? 1 : 0), 0);
+  if (rows.length && table === 'resources') await audit(c.env, who.actor, 'import', 'resource', null, { rows: rows.length, added });
+  return json({ table, received: rows.length, added, skipped: rows.length - added });
+});
+
 route('POST', '/api/editor/digest', async (c) => {
   const who = guard(c);
   const d = await buildDigest(c.env);
